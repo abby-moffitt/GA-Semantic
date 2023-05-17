@@ -131,10 +131,9 @@ export const Theme = () => {
           </Header>
 
           <Checkbox
-            label='Checkbox Example'
+            label='Default Checkbox'
             onChange={handleCheckboxOnChange}
           />
-          <p>{isCheckboxChecked ? 'Checked' : 'Unchecked'}</p>
 
           <Header size='small' dividing>
             Disabled
