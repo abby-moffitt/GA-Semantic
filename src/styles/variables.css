@@ -1,0 +1,92 @@
+:root {
+  /* colors */
+  --neutral-300: #f2f2f2;
+  --neutral-500: #e2e2e2;
+  --neutral-700: #b2b1b2;
+  --neutral-900: #808080;
+
+  --primary-pms-539-600: #bfcad0;
+  --primary-pms-539_700: #8095a2;
+  --primary-pms-539_800: #406073;
+  --primary-pms-539_900: #002b45;
+
+  --primary-process-blue-600: #bfe0f2;
+  --primary-process-blue-700: #80c2e4;
+  --primary-process-blue-800: #40a3d7;
+  --primary-process-blue-900: #0085ca;
+
+  --primary-pms-298_600: #d5ecf7;
+  --primary-pms-298_700: #abdaef;
+  --primary-pms-298_800: #81c7e8;
+  --primary-pms-298_900: #57b5e0;
+
+  --secondary-pms-7462-600: #c2d6e3;
+  --secondary-pms-7462-700: #86adc8;
+  --secondary-pms-7462-800: #4985ac;
+  --secondary-pms-7462-900: #0d5c91;
+
+  --secondary-pms-7457-100: #f5f8f9;
+  --secondary-pms-7457-200: #eaf1f2;
+  --secondary-pms-7457-300: #e0eaec;
+  --secondary-pms-7457-400: #d6e3e6;
+
+  --primary-pms-362_600: #cbe0cf;
+  --primary-pms-362_700: #96c29f;
+  --primary-pms-362_800: #62a370;
+  --primary-pms-362_900: #2e8540;
+
+  --tertiary-cool-grey-700: #b5b0ad;
+  --tertiary-cool-grey-900: #666366;
+  --tertiary-pms-7404-800: #f7ec8c;
+  --tertiary-pms-7404-900: #f0d91a;
+
+  --background-blue: #effaff;
+  --background-grey: #f8f8f8;
+
+  --alert-info: var(--primary-process-blue-900);
+  --alert-success-700: #a3d963;
+  --alert-warning-600: #fbe1ce;
+  --alert-warning-900: #f29b5b;
+  --alert-error-600: #f7c8c8;
+  --alert-error-900: #e54848;
+
+  --shade-white: #ffffff;
+  --shade-black: #000000;
+
+  /* spacing */
+  --spacing-1: 8px;
+  --spacing-2: calc(var(--spacing-1) * 2);
+  --spacing-3: calc(var(--spacing-1) * 3);
+  --spacing-4: calc(var(--spacing-1) * 4);
+  --spacing-5: calc(var(--spacing-1) * 5);
+  --spacing-6: calc(var(--spacing-1) * 6);
+  --spacing-7: calc(var(--spacing-1) * 7);
+  --spacing-8: calc(var(--spacing-1) * 8);
+  --spacing-9: calc(var(--spacing-1) * 9);
+
+  /* box shadow */
+  --box-shadow-1: 0px 1px 1px rgba(0, 0, 0, 0.14);
+  --box-shadow-2: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.14);
+  --box-shadow-3: 0px 1px 8px rgba(0, 0, 0, 0.15),
+    0px 3px 3px rgba(0, 0, 0, 0.1), 0px 3px 4px rgba(0, 0, 0, 0.1);
+  --box-shadow-4: 0px 3px 5px rgba(0, 0, 0, 0.15),
+    0px 1px 18px rgba(0, 0, 0, 0.1), 0px 6px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-5: 0px 5px 5px rgba(0, 0, 0, 0.15),
+    0px 3px 14px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-6: 0px 7px 8px rgba(0, 0, 0, 0.15),
+    0px 5px 22px rgba(0, 0, 0, 0.1), 0px 12px 17px rgba(0, 0, 0, 0.1);
+  --box-shadow-7: 0px 8px 10px rgba(0, 0, 0, 0.15),
+    0px 6px 30px rgba(0, 0, 0, 0.1), 0px 16px 24px rgba(0, 0, 0, 0.1);
+  --box-shadow-8: 0px 11px 13px rgba(0, 0, 0, 0.15),
+    0px 9px 46px rgba(0, 0, 0, 0.1), 0px 24px 38px rgba(0, 0, 0, 0.1);
+
+  /* border radius */
+  --border-radius-1: 2px;
+  --border-radius-2: calc(var(--border-radius-1) * 2);
+  --border-radius-3: calc(var(--border-radius-1) * 3);
+
+  /* transition */
+  --transition-hover: 200ms;
+  --transition-appear: 500ms;
+}
