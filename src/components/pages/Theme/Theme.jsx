@@ -188,22 +188,22 @@ export const Theme = () => {
 
           <Form>
             <Form.Field>
-              <label for='input-default'>Label</label>
+              <label htmlFor='input-default'>Label</label>
               <Input id='input-default' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='error'>
-              <label for='input-error'>Error</label>
+              <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='success'>
-              <label for='input-success'>Success</label>
+              <label htmlFor='input-success'>Success</label>
               <Input id='input-success' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='disabled'>
-              <label for='input-disabled'>Disabled</label>
+              <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder='Input' />
             </Form.Field>
           </Form>
