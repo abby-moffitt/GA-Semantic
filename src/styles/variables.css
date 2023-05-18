@@ -65,14 +65,11 @@
 
   /* font size */
 
-  --font-size: 1rem;
-  --line-height: 1.5rem;
+  --huge-font-size: 3.75rem;
+  --huge-line-height: 5.625rem;
 
-  --display1-font-size: 3.75rem;
-  --display1-line-height: 5.625rem;
-
-  --display2-font-size: 3.5rem;
-  --display2-line-height: 3.75rem;
+  --large-font-size: 3.5rem;
+  --large-line-height: 3.75rem;
 
   --h1-font-size: 2.25rem;
   --h1-line-height: 3.375rem;
@@ -89,17 +86,17 @@
   --h5-font-size: 1.25rem;
   --h5-line-height: 1.875rem;
 
-  --subheading-font-size: 1.125rem;
-  --subheading-line-height: 1.6rem;
+  --h6-font-size: 1.125rem;
+  --h6-line-height: 1.6rem;
 
-  --p1-font-size: 1rem;
-  --p1-line-height: 1.5rem;
+  --medium-font-size: 1rem;
+  --medium-line-height: 1.5rem;
 
-  --p2-font-size: 0.875rem;
-  --p2-line-height: 1.3rem;
+  --small-font-size: 0.875rem;
+  --small-line-height: 1.3rem;
 
-  --p3-font-size: 0.75rem;
-  --p3-line-height: 1.125rem;
+  --tiny-font-size: 0.75rem;
+  --tiny-line-height: 1.125rem;
 
   /* font weights */
 
