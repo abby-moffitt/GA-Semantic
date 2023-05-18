@@ -15,6 +15,7 @@ import {
 
 // styles
 import './Theme.css';
+import '../../../styles/input.css';
 
 export const Theme = () => {
   // state
