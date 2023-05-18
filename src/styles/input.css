@@ -1,10 +1,10 @@
 .ui.input > input {
   padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
-  line-height: 24px;
+  line-height: var(--line-height);
   border-radius: var(--border-radius-2);
   background-color: var(--shade-white);
   border: 1px solid var(--neutral-900);
-  font-size: 16px;
+  font-size: var(--font-size);
 }
 
 .ui.input > input:focus {
@@ -13,7 +13,7 @@
 
 .ui.input > input::placeholder {
   color: var(--neutral-900);
-  font-weight: 400;
+  font-weight: var(--book-weight);
 }
 
 .ui.input.error > input {
@@ -25,14 +25,14 @@
 .ui.input.error > input::placeholder,
 .ui.input.error > input:focus::placeholder {
   color: var(--neutral-900);
-  font-weight: 400;
+  font-weight: var(--book-weight);
 }
 
 .ui.input.disabled > input {
   border: 1px solid var(--neutral-700);
 }
 
-.ui.input.disabled > inpu::placeholder {
+.ui.input.disabled > input::placeholder {
   color: var(--neutral-700);
 }
 
