@@ -68,32 +68,38 @@
   --font-size: 1rem;
   --line-height: 1.5rem;
 
-  --display1: 3.75rem;
-  --display2: 3.5rem;
-  --h1: 2.25rem;
-  --h2: 2rem;
-  --h3: 1.75rem;
-  --h4: 1.5rem;
-  --h5: 1.25rem;
+  --display1-font-size: 3.75rem;
+  --display1-line-height: 5.625rem;
 
-  --subheading: 1.125rem;
-  --p1: 1rem;
-  --p2: 0.875rem;
-  --p3: 0.75rem;
+  --display2-font-size: 3.5rem;
+  --display2-line-height: 3.75rem;
 
-  /* line heights */
-  --display1-height: 5.625rem;
-  --display2-height: 3.75rem;
-  --h1-height: 3.375rem;
-  --h2-height: 3rem;
-  --h3-height: 2.625rem;
-  --h4-height: 2.25rem;
-  --h5-height: 1.875rem;
+  --h1-font-size: 2.25rem;
+  --h1-line-height: 3.375rem;
 
-  --subheading-height: 1.6rem;
-  --p1-height: 1.5rem;
-  --p2-height: 1.3rem;
-  --p3-height: 1.125rem;
+  --h2-font-size: 2rem;
+  --h2-line-height: 3rem;
+
+  --h3-font-size: 1.75rem;
+  --h3-line-height: 2.625rem;
+
+  --h4-font-size: 1.5rem;
+  --h4-line-height: 2.25rem;
+
+  --h5-font-size: 1.25rem;
+  --h5-line-height: 1.875rem;
+
+  --subheading-font-size: 1.125rem;
+  --subheading-line-height: 1.6rem;
+
+  --p1-font-size: 1rem;
+  --p1-line-height: 1.5rem;
+
+  --p2-font-size: 0.875rem;
+  --p2-line-height: 1.3rem;
+
+  --p3-font-size: 0.75rem;
+  --p3-line-height: 1.125rem;
 
   /* font weights */
 
