@@ -96,7 +96,7 @@
   --transition-appear: 500ms;
 
   /* weights */
-  --black-weight: 900;
-  --bold-weight: 700;
-  --book-weight: 400;
+  --weight-body: 400;
+  --weight-heading: 700;
+  --weight-display: 900;
 }
