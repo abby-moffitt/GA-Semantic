@@ -53,6 +53,9 @@
   --shade-white: #ffffff;
   --shade-black: #000000;
 
+  /* font */
+  --gotham: 'Gotham', Arial, Calibri, sans-serif;
+
   /* spacing */
   --spacing-1: 8px;
   --spacing-2: calc(var(--spacing-1) * 2);
