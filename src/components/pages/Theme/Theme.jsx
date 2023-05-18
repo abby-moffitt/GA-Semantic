@@ -250,7 +250,7 @@ export const Theme = () => {
           <Header as='h3'>Heading 3</Header>
           <Header as='h4'>Heading 4</Header>
           <Header as='h5'>Heading 5</Header>
-          <Header as='h5'>Heading 5</Header>
+          <Header as='h6'>Heading 6</Header>
           <Header size='medium'>Medium</Header>
           <Header size='small'>Small</Header>
           <Header size='tiny'>Tiny</Header>

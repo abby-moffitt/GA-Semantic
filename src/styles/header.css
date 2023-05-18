@@ -1,3 +1,69 @@
 .ui.header {
   font-family: var(--gotham);
 }
+
+h1.ui.header {
+  font-size: var(--h1);
+  line-height: var(--h1-height);
+  font-weight: var(--black-weight);
+}
+
+h2.ui.header {
+  font-size: var(--h2);
+  line-height: var(--h2-height);
+  font-weight: var(--black-weight);
+}
+
+h3.ui.header {
+  font-size: var(--h3);
+  line-height: var(--h3-height);
+  font-weight: var(--black-weight);
+}
+
+h4.ui.header {
+  font-size: var(--h4);
+  line-height: var(--h4-height);
+  font-weight: var(--black-weight);
+}
+
+h5.ui.header {
+  font-size: var(--h5);
+  line-height: var(--h5-height);
+  font-weight: var(--black-weight);
+}
+
+h6.ui.header {
+  font-size: var(--subheading);
+  line-height: var(--subheading-height);
+  font-weight: var(--book-weight);
+}
+
+.ui.huge.header {
+  font-size: var(--display1);
+  line-height: var(--display1-height);
+  font-weight: var(--black-weight);
+}
+
+.ui.large.header {
+  font-size: var(--display2);
+  line-height: var(--display2-height);
+  font-weight: var(--black-weight);
+}
+
+.ui.medium.header {
+  font-size: var(--p1);
+  line-height: var(--p1-height);
+  font-weight: var(--book-weight);
+}
+
+.ui.small.header {
+  font-size: var(--p2);
+  line-height: var(--p2-height);
+  font-weight: var(--book-weight);
+}
+
+.ui.tiny.header {
+  font-size: var(--p3);
+  line-height: var(--p3-height);
+  font-weight: var(--book-weight);
+}
