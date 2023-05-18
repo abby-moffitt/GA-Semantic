@@ -21,3 +21,7 @@ body {
   padding: var(--spacing-2);
   font-family: var(--gotham);
 }
+
+html {
+  font-size: 16px;
+}
