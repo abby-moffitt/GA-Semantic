@@ -15,7 +15,6 @@ import {
 
 // styles
 import './Theme.css';
-import '../../../ga.css';
 
 export const Theme = () => {
   // state
