@@ -11,6 +11,8 @@ import {
   Input,
   Segment,
   Tab,
+  TextArea,
+  Select,
 } from 'semantic-ui-react';
 
 // styles
@@ -187,25 +189,41 @@ export const Theme = () => {
           </Header>
 
           <Form>
-            <Form.Field>
-              <label for='input-default'>Label</label>
+            <Form.Field required>
+              <label htmlFor='input-default'>Label</label>
               <Input id='input-default' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='error'>
-              <label for='input-error'>Error</label>
+              <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='success'>
-              <label for='input-success'>Success</label>
+              <label htmlFor='input-success'>Success</label>
               <Input id='input-success' placeholder='Input' />
             </Form.Field>
 
             <Form.Field className='disabled'>
-              <label for='input-disabled'>Disabled</label>
+              <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder='Input' />
             </Form.Field>
+
+            <Form.Field
+              control={Select}
+              label='Dropdown'
+              options={[
+                { key: 'option1', text: 'Option 1', value: 'option1' },
+                { key: 'option2', text: 'Option 2', value: 'option2' },
+              ]}
+              placeholder='Select options'
+            />
+
+            <Form.Field
+              control={TextArea}
+              label='About'
+              placeholder='Tell us more about you...'
+            />
           </Form>
         </Segment>
       </div>

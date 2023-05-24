@@ -56,6 +56,11 @@
   /* font */
   --gotham: 'Gotham', Arial, Calibri, sans-serif;
 
+  --p3-font-size: 0.75rem;
+  --p3-line-height: 1.125rem;
+
+  --bold-weight: 700;
+
   /* spacing */
   --spacing-1: 8px;
   --spacing-2: calc(var(--spacing-1) * 2);
