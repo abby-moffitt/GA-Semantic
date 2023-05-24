@@ -34,7 +34,7 @@
 }
 
 .ui.checkbox input:focus ~ label:after {
-  color: var(--shade-white);
+  color: var(--shade-white) !important;
 }
 
 /* hover */
