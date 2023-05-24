@@ -13,7 +13,7 @@
 
 .ui.input > input::placeholder {
   color: var(--neutral-900);
-  font-weight: var(--weight-body);
+  font-weight: 400;
 }
 
 .ui.input.error > input {
@@ -25,7 +25,7 @@
 .ui.input.error > input::placeholder,
 .ui.input.error > input:focus::placeholder {
   color: var(--neutral-900);
-  font-weight: var(--weight-body);
+  font-weight: 400;
 }
 
 .ui.input.disabled > input {

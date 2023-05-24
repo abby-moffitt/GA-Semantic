@@ -94,9 +94,4 @@
   /* transition */
   --transition-hover: 200ms;
   --transition-appear: 500ms;
-
-  /* weights */
-  --weight-body: 400;
-  --weight-heading: 700;
-  --weight-display: 900;
 }
