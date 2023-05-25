@@ -6,6 +6,7 @@
   padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
   min-width: 0;
   min-height: 0;
+  font-family: var(--gotham);
 }
 
 .ui.selection.dropdown .divider.text {
