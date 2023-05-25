@@ -1,0 +1,41 @@
+.ui.input > input {
+  padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
+  line-height: var(--line-height);
+  border-radius: var(--border-radius-2);
+  background-color: var(--shade-white);
+  border: 1px solid var(--neutral-900);
+  font-size: var(--font-size);
+}
+
+.ui.input > input:focus {
+  border-color: var(--primary-pms-362_900);
+}
+
+.ui.input > input::placeholder {
+  color: var(--neutral-900);
+  font-weight: 400;
+}
+
+.ui.input.error > input {
+  border: 2px solid var(--alert-error-900);
+  color: var(--shade-black);
+  background-color: var(--shade-white);
+}
+
+.ui.input.error > input::placeholder,
+.ui.input.error > input:focus::placeholder {
+  color: var(--neutral-900);
+  font-weight: 400;
+}
+
+.ui.input.disabled > input {
+  border: 1px solid var(--neutral-700);
+}
+
+.ui.input.disabled > input::placeholder {
+  color: var(--neutral-700);
+}
+
+.ui.input .icon {
+  color: var(--tertiary-cool-grey-900);
+}
