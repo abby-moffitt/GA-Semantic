@@ -33,14 +33,6 @@
   background-color: var(--shade-white);
   color: var(--primary-pms-362_900);
   border: 1px solid var(--primary-pms-362_900);
-  border-radius: var(--border-radius-3);
-  font-family: var(--gotham);
-}
-
-.ui.secondary.button {
-  background-color: var(--shade-white);
-  color: var(--primary-pms-362_900);
-  border: 1px solid var(--primary-pms-362_900);
 }
 
 /** Secondary Focus **/
