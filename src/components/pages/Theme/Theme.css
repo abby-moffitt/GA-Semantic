@@ -6,3 +6,12 @@
   display: flex;
   gap: var(--spacing-1);
 }
+
+.dropdownBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownBox .dropdown {
+  margin: 5px 0;
+}

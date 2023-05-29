@@ -20,7 +20,6 @@ import './Theme.css';
 
 export const Theme = () => {
   // state
-  const [dropdownValue, setDropdownValue] = useState('');
   const [inputValue, setInputValue] = useState('');
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
@@ -67,11 +66,6 @@ export const Theme = () => {
 
   const handleCheckboxOnChange = () => {
     setIsCheckboxChecked(!isCheckboxChecked);
-  };
-
-  const handleDropdownChange = (e, data) => {
-    alert(data.value);
-    setDropdownValue(data.value);
   };
 
   const panes = [
@@ -149,15 +143,25 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Dropdown
           </Header>
-
-          <Dropdown
-            className='dropdownMenu'
-            onChange={handleDropdownChange}
-            options={dropdownOptions}
-            placeholder='Select'
-            selection
-            value={dropdownValue}
-          />
+          <div className='dropdownBox'>
+            <Dropdown
+              options={dropdownOptions}
+              placeholder='Select'
+              selection
+            />
+            <Dropdown
+              error
+              options={dropdownOptions}
+              placeholder='Select'
+              selection
+            />
+            <Dropdown
+              disabled
+              options={dropdownOptions}
+              placeholder='Select'
+              selection
+            />
+          </div>
         </Segment>
       </div>
 
