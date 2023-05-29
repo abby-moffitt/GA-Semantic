@@ -56,7 +56,7 @@
 
 /** Error **/
 .ui.selection.dropdown.error {
-  border: 2px solid var(--alert-error-900);
+  border: 1px solid var(--alert-error-900);
   background-color: var(--shade-white);
 }
 
