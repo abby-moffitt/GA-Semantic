@@ -9,7 +9,7 @@
   font-size: var(--p3-font-size);
   line-height: var(--p3-line-height);
   color: var(--neutral-900);
-  font-weight: var(--bold-weight);
+  font-weight: 700;
   text-transform: none;
 }
 

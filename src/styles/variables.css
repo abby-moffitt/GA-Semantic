@@ -61,10 +61,7 @@
   --p3-font-size: 0.75rem;
   --p3-line-height: 1.125rem;
 
-  --bold-weight: 700;
-
   /* font size */
-
   --huge-font-size: 3.75rem;
   --huge-line-height: 5.625rem;
 
@@ -97,12 +94,6 @@
 
   --tiny-font-size: 0.75rem;
   --tiny-line-height: 1.125rem;
-
-  /* font weights */
-
-  --black-weight: 900;
-  --bold-weight: 700;
-  --book-weight: 400;
 
   /* spacing */
   --spacing-1: 8px;
