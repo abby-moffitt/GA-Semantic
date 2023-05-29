@@ -1,7 +1,7 @@
 /* button */
 
 .ui.button {
-  background-color: var(--primary-pms-362_900);
+  background-color: var(--primary-pms-362-900);
   color: var(--shade-white);
   font-family: var(--gotham);
   border-radius: var(--border-radius-3);
@@ -21,21 +21,21 @@
 
 /** Focus **/
 .ui.button:focus {
-  background-color: var(--primary-pms-362_900);
+  background-color: var(--primary-pms-362-900);
   color: var(--shade-white);
 }
 
 /** Hover **/
 
 .ui.button:hover {
-  background-color: var(--primary-pms-362_800);
+  background-color: var(--primary-pms-362-800);
   color: var(--shade-white);
 }
 
 /** Active **/
 
 .ui.button:active {
-  background-color: var(--primary-pms-362_700);
+  background-color: var(--primary-pms-362-700);
   color: var(--shade-white);
 }
 
@@ -43,30 +43,30 @@
 
 .ui.secondary.button {
   background-color: var(--shade-white);
-  color: var(--primary-pms-362_900);
-  border: 1px solid var(--primary-pms-362_900);
+  color: var(--primary-pms-362-900);
+  border: 1px solid var(--primary-pms-362-900);
 }
 
 /** Secondary Focus **/
 
 .ui.secondary.button:focus {
   background-color: var(--shade-white);
-  color: var(--primary-pms-362_900);
-  border: 1px solid var(--primary-pms-362_900);
+  color: var(--primary-pms-362-900);
+  border: 1px solid var(--primary-pms-362-900);
 }
 
 /** Secondary Hover **/
 
 .ui.secondary.button:hover {
   background-color: var(--shade-white);
-  color: var(--primary-pms-362_800);
-  border-color: var(--primary-pms-362_800);
+  color: var(--primary-pms-362-800);
+  border-color: var(--primary-pms-362-800);
 }
 
 /** Secondary Active **/
 
 .ui.secondary.button:active {
   background-color: var(--shade-white);
-  color: var(--primary-pms-362_700);
-  border-color: var(--primary-pms-362_700);
+  color: var(--primary-pms-362-700);
+  border-color: var(--primary-pms-362-700);
 }
