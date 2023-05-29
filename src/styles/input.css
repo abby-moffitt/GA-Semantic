@@ -8,7 +8,7 @@
 }
 
 .ui.input > input:focus {
-  border-color: var(--primary-pms-362_900);
+  border-color: var(--primary-pms-362-900);
 }
 
 .ui.input > input::placeholder {

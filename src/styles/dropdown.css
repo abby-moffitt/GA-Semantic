@@ -20,22 +20,22 @@
 
 /** Focus **/
 .ui.selection.dropdown:not(.error):focus {
-  border-color: var(--primary-pms-362_900);
+  border-color: var(--primary-pms-362-900);
 }
 
 /** Focus and Hover **/
 .ui.selection.dropdown:not(.error):focus:hover {
-  border-color: var(--primary-pms-362_800);
+  border-color: var(--primary-pms-362-800);
 }
 
 /** Hover **/
 .ui.selection.dropdown:not(.error):hover {
-  border-color: var(--primary-pms-362_800);
+  border-color: var(--primary-pms-362-800);
 }
 
 /** Active **/
 .ui.active.visible.selection.dropdown:not(.error) {
-  border-color: var(--primary-pms-362_900);
+  border-color: var(--primary-pms-362-900);
 }
 
 /** Error **/
