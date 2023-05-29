@@ -114,8 +114,20 @@ export const Theme = () => {
           </Header>
 
           <div className='row'>
-            <Button>Primary</Button>
-            <Button secondary>Secondary</Button>
+            <Button size='small'>Small Primary</Button>
+            <Button size='medium'>Medium Primary</Button>
+            <Button size='large'>Large Primary</Button>
+          </div>
+          <div className='row'>
+            <Button secondary size='small'>
+              Small Secondary
+            </Button>
+            <Button secondary size='medium'>
+              Medium Secondary
+            </Button>
+            <Button secondary size='large'>
+              Large Secondary
+            </Button>
           </div>
         </Segment>
       </div>

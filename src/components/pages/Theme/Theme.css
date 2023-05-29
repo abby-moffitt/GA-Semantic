@@ -5,6 +5,7 @@
 .row {
   display: flex;
   gap: var(--spacing-1);
+  margin: var(--spacing-2) 0;
 }
 
 .dropdownBox {
