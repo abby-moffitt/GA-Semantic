@@ -135,6 +135,14 @@ export const Theme = () => {
             Disabled
           </Header>
           <Checkbox label='Disabled Checkbox' disabled />
+
+          <Header size='small' dividing>
+            Form
+          </Header>
+          <div className='section'>
+            <Form.Checkbox label='Form checkbox' />
+          </div>
+          <Form.Field control={Checkbox} label='Form field' />
         </Segment>
       </div>
 
