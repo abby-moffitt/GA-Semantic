@@ -139,7 +139,9 @@ export const Theme = () => {
           <Header size='small' dividing>
             Form
           </Header>
-          <Form.Checkbox label='Form checkbox' />
+          <div className='section'>
+            <Form.Checkbox label='Form checkbox' />
+          </div>
           <Form.Field control={Checkbox} label='Form field' />
         </Segment>
       </div>
