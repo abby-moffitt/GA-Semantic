@@ -1,3 +1,71 @@
+/* header */
+
 .ui.header {
   font-family: var(--gotham);
+}
+
+h1.ui.header {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  font-weight: 900;
+}
+
+h2.ui.header {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: 900;
+}
+
+h3.ui.header {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  font-weight: 900;
+}
+
+h4.ui.header {
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
+  font-weight: 900;
+}
+
+h5.ui.header {
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height);
+  font-weight: 900;
+}
+
+h6.ui.header {
+  font-size: var(--h6-font-size);
+  line-height: var(--h6-line-height);
+  font-weight: 400;
+}
+
+.ui.huge.header {
+  font-size: var(--huge-font-size);
+  line-height: var(--huge-line-height);
+  font-weight: 900;
+}
+
+.ui.large.header {
+  font-size: var(--large-font-size);
+  line-height: var(--large-line-height);
+  font-weight: 900;
+}
+
+.ui.medium.header {
+  font-size: var(--medium-font-size);
+  line-height: var(--medium-line-height);
+  font-weight: 400;
+}
+
+.ui.small.header {
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  font-weight: 400;
+}
+
+.ui.tiny.header {
+  font-size: var(--tiny-font-size);
+  line-height: var(--tiny-line-height);
+  font-weight: 400;
 }
