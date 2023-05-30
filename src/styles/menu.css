@@ -24,7 +24,7 @@
 }
 
 .ui.tabular.menu .active.item {
-  border-color: var(--primary-pms-362_900);
+  border-color: var(--primary-pms-362-900);
 }
 
 .ui.menu .item > i.icon {
