@@ -3,7 +3,6 @@
 .ui.button {
   background-color: var(--primary-pms-362-900);
   color: var(--shade-white);
-  font-family: var(--gotham);
   border-radius: var(--border-radius-3);
   padding: 0.625rem;
   line-height: 1.5em;
