@@ -13,6 +13,7 @@ import {
   Tab,
   TextArea,
   Select,
+  Label,
 } from 'semantic-ui-react';
 
 // styles
@@ -258,6 +259,42 @@ export const Theme = () => {
             Tab
           </Header>
           <Tab panes={panes} />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Chip
+          </Header>
+          <div className='row'>
+            <Label as='a' color='green'>
+              Filled Green
+              <Icon name='delete' />
+            </Label>
+            <Label as='a' color='blue'>
+              Filled Blue
+              <Icon name='delete' />
+            </Label>
+            <Label as='a' color='grey'>
+              Filled Grey
+              <Icon name='delete' />
+            </Label>
+          </div>
+          <div className='row'>
+            <Label as='a' basic color='green'>
+              Outlined Green
+              <Icon name='delete' />
+            </Label>
+            <Label as='a' basic color='blue'>
+              Outlined Blue
+              <Icon name='delete' />
+            </Label>
+            <Label as='a' basic color='grey'>
+              Outlined Grey
+              <Icon name='delete' />
+            </Label>
+          </div>
         </Segment>
       </div>
 

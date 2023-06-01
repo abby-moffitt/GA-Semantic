@@ -1,0 +1,90 @@
+/* label */
+
+.ui.label {
+  font-family: var(--gotham);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: var(--spacing-1) 10px;
+  border-radius: 6px;
+}
+
+/* green */
+
+.ui.label.green {
+  background-color: var(--primary-pms-362-900) !important;
+  color: var(--shade-white) !important;
+}
+
+a.ui.label.green:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--primary-pms-362-600) !important;
+}
+
+/** grey **/
+
+.ui.label.grey {
+  background-color: var(--secondary-pms-7457-400) !important;
+  color: var(--shade-black) !important;
+}
+
+a.ui.label.grey:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--primary-pms-298-700) !important;
+}
+
+/** blue **/
+
+.ui.label.blue {
+  background-color: var(--secondary-pms-7462-800) !important;
+  color: var(--shade-white) !important;
+}
+
+a.ui.label.blue:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--secondary-pms-7457-400) !important;
+}
+
+/** basic - outlined **/
+
+.ui.label.basic {
+  border-width: 2px;
+}
+
+/** basic green **/
+
+.ui.label.basic.green {
+  color: var(--primary-pms-362-900) !important;
+  border-color: var(--primary-pms-362-900) !important;
+}
+
+a.ui.label.basic.green:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--primary-pms-362-600) !important;
+  border-color: var(--primary-pms-362-900) !important;
+}
+
+/** basic grey **/
+
+.ui.label.basic.grey {
+  color: var(--secondary-pms-7457-400) !important;
+  border-color: var(--secondary-pms-7457-400) !important;
+}
+
+a.ui.label.basic.grey:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--primary-pms-298-700) !important;
+  border-color: var(--secondary-pms-7457-400) !important;
+}
+
+/** basic blue **/
+
+.ui.label.basic.blue {
+  color: var(--secondary-pms-7462-800) !important;
+  border-color: var(--secondary-pms-7462-800) !important;
+}
+
+a.ui.label.basic.blue:hover {
+  color: var(--shade-black) !important;
+  background-color: var(--secondary-pms-7457-400) !important;
+  border-color: var(--secondary-pms-7462-800) !important;
+}
