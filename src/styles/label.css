@@ -6,6 +6,12 @@
   font-weight: 400;
   padding: var(--spacing-1) 10px;
   border-radius: 6px;
+  transition: var(--transition-hover);
+}
+
+a.ui.label,
+button.ui.label {
+  cursor: pointer;
 }
 
 /* green */
@@ -15,7 +21,8 @@
   color: var(--shade-white) !important;
 }
 
-a.ui.label.green:hover {
+a.ui.label.green:hover,
+button.ui.label.green:hover {
   color: var(--shade-black) !important;
   background-color: var(--primary-pms-362-600) !important;
 }
@@ -27,7 +34,8 @@ a.ui.label.green:hover {
   color: var(--shade-black) !important;
 }
 
-a.ui.label.grey:hover {
+a.ui.label.grey:hover,
+button.ui.label.grey:hover {
   color: var(--shade-black) !important;
   background-color: var(--primary-pms-298-700) !important;
 }
@@ -39,7 +47,8 @@ a.ui.label.grey:hover {
   color: var(--shade-white) !important;
 }
 
-a.ui.label.blue:hover {
+a.ui.label.blue:hover,
+button.ui.label.blue:hover {
   color: var(--shade-black) !important;
   background-color: var(--secondary-pms-7457-400) !important;
 }
@@ -57,7 +66,8 @@ a.ui.label.blue:hover {
   border-color: var(--primary-pms-362-900) !important;
 }
 
-a.ui.label.basic.green:hover {
+a.ui.label.basic.green:hover,
+button.ui.label.basic.green:hover {
   color: var(--shade-black) !important;
   background-color: var(--primary-pms-362-600) !important;
   border-color: var(--primary-pms-362-900) !important;
@@ -70,7 +80,8 @@ a.ui.label.basic.green:hover {
   border-color: var(--secondary-pms-7457-400) !important;
 }
 
-a.ui.label.basic.grey:hover {
+a.ui.label.basic.grey:hover,
+button.ui.label.basic.grey:hover {
   color: var(--shade-black) !important;
   background-color: var(--primary-pms-298-700) !important;
   border-color: var(--secondary-pms-7457-400) !important;
@@ -83,7 +94,8 @@ a.ui.label.basic.grey:hover {
   border-color: var(--secondary-pms-7462-800) !important;
 }
 
-a.ui.label.basic.blue:hover {
+a.ui.label.basic.blue:hover,
+button.ui.label.basic.blue:hover {
   color: var(--shade-black) !important;
   background-color: var(--secondary-pms-7457-400) !important;
   border-color: var(--secondary-pms-7462-800) !important;

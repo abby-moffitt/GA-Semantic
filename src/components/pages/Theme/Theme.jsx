@@ -185,32 +185,10 @@ export const Theme = () => {
           </div>
         </Segment>
       </div>
-
       <div className='section'>
         <Segment>
           <Header as='h2' dividing>
-            Input
-          </Header>
-
-          <Input
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder='Text input'
-            icon={
-              inputValue.length === 0 ? (
-                ''
-              ) : (
-                <Icon name='times circle outline' onClick={handleClear} link />
-              )
-            }
-          />
-        </Segment>
-      </div>
-
-      <div className='section'>
-        <Segment>
-          <Header as='h2' dividing>
-            Label
+            Form
           </Header>
 
           <Form>
@@ -254,47 +232,77 @@ export const Theme = () => {
       </div>
 
       <div className='section'>
+        <Segment>
+          <Header as='h2' dividing>
+            Input
+          </Header>
+
+          <Input
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder='Text input'
+            icon={
+              inputValue.length === 0 ? (
+                ''
+              ) : (
+                <Icon name='times circle outline' onClick={handleClear} link />
+              )
+            }
+          />
+        </Segment>
+      </div>
+      <div className='section'>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Label
+          </Header>
+          <Header size='small' dividing>
+            Default
+          </Header>
+          <div className='row'>
+            <Label color='green'>Filled Green</Label>
+            <Label color='blue'>Filled Blue</Label>
+            <Label color='grey'>Filled Grey</Label>
+          </div>
+          <Header size='small' dividing>
+            Outlined
+          </Header>
+          <div className='row'>
+            <Label basic color='green'>
+              Outlined Green
+            </Label>
+            <Label basic color='blue'>
+              Outlined Blue
+            </Label>
+            <Label basic color='grey'>
+              Outlined Grey
+            </Label>
+          </div>
+          <Header size='small' dividing>
+            Interactive
+          </Header>
+          <div className='row'>
+            <Label basic as='button' color='green'>
+              Interactive
+              <Icon name='delete' />
+            </Label>
+            <Label as='button' color='blue'>
+              Interactive
+              <Icon name='delete' />
+            </Label>
+            <Label as='button' color='grey'>
+              Interactive
+              <Icon name='delete' />
+            </Label>
+          </div>
+        </Segment>
+      </div>
+      <div className='section'>
         <Segment padded>
           <Header as='h2' dividing>
             Tab
           </Header>
           <Tab panes={panes} />
-        </Segment>
-      </div>
-
-      <div className='section'>
-        <Segment padded>
-          <Header as='h2' dividing>
-            Chip
-          </Header>
-          <div className='row'>
-            <Label as='a' color='green'>
-              Filled Green
-              <Icon name='delete' />
-            </Label>
-            <Label as='a' color='blue'>
-              Filled Blue
-              <Icon name='delete' />
-            </Label>
-            <Label as='a' color='grey'>
-              Filled Grey
-              <Icon name='delete' />
-            </Label>
-          </div>
-          <div className='row'>
-            <Label as='a' basic color='green'>
-              Outlined Green
-              <Icon name='delete' />
-            </Label>
-            <Label as='a' basic color='blue'>
-              Outlined Blue
-              <Icon name='delete' />
-            </Label>
-            <Label as='a' basic color='grey'>
-              Outlined Grey
-              <Icon name='delete' />
-            </Label>
-          </div>
         </Segment>
       </div>
 
