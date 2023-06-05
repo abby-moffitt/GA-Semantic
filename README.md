@@ -64,6 +64,14 @@ Below are the Semantic UI components that have custom styles applied to them:
     <td>High</td>
   </tr>
   <tr>
+    <td><a href="https://react.semantic-ui.com/elements/label/" target="_blank">Label</a></td>
+    <td>Element</td>
+    <td>label.css</td>
+    <td>Medium</td>
+    <td>Medium</td>
+    <td>Low</td>
+  </tr>
+  <tr>
     <td><a href="https://react.semantic-ui.com/elements/segment/" target="_blank">Segment</a></td>
     <td>Element</td>
     <td>segment.css</td>
