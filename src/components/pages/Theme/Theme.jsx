@@ -188,7 +188,7 @@ export const Theme = () => {
       <div className='section'>
         <Segment>
           <Header as='h2' dividing>
-            Form
+            Form Label
           </Header>
 
           <Form>
