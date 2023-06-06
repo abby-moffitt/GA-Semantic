@@ -109,7 +109,6 @@ export const Theme = () => {
 
   const messageText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
-  const inlineMessageText = 'Lorem ipsum dolor sit amet';
 
   // handlers
   const handleInputChange = (e) => {
@@ -356,7 +355,7 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Message
           </Header>
-          <MessageExample content={messageText} />
+          <MessageExample header='Title' content={messageText} icon='alarm' />
 
           <Header size='small' dividing>
             Info
@@ -383,8 +382,8 @@ export const Theme = () => {
           </Header>
           <MessageExample
             content={messageText}
-            negative
             icon='warning circle'
+            negative
           />
 
           <Header size='small' dividing>
@@ -394,13 +393,47 @@ export const Theme = () => {
 
           <Segment>
             <Header size='small' dividing>
-              Compact (inline)
+              Inline (secondary)
             </Header>
-            <MessageExample compact size='mini' />
-            <MessageExample compact color='red' size='mini' />
-            <MessageExample compact color='green' size='mini' />
-            <MessageExample compact color='yellow' size='mini' />
-            <MessageExample compact color='blue' size='mini' />
+            <Header size='small' dividing>
+              Info (blue)
+            </Header>
+            <MessageExample
+              color='blue'
+              content={messageText}
+              icon='info circle'
+              size='mini'
+            />
+
+            <Header size='small' dividing>
+              Warning (yellow)
+            </Header>
+            <MessageExample
+              color='yellow'
+              content={messageText}
+              icon='warning sign'
+              size='mini'
+            />
+
+            <Header size='small' dividing>
+              Positive/success (green)
+            </Header>
+            <MessageExample
+              color='green'
+              content={messageText}
+              icon='check circle'
+              size='mini'
+            />
+
+            <Header size='small' dividing>
+              Negative/error (red)
+            </Header>
+            <MessageExample
+              color='red'
+              content={messageText}
+              icon='warning circle'
+              size='mini'
+            />
           </Segment>
         </Segment>
       </div>
