@@ -2,23 +2,46 @@ import React, { useState } from 'react';
 
 // semantic
 import {
-  Checkbox,
   Button,
   Divider,
+  Checkbox,
   Dropdown,
   Form,
   Header,
   Icon,
   Input,
+  Label,
+  Message,
   Segment,
+  Select,
   Tab,
   TextArea,
-  Select,
-  Label,
 } from 'semantic-ui-react';
 
 // styles
 import './Theme.css';
+
+const MessageExample = (props) => {
+  const [isMessageOpen, setIsMessageOpen] = useState(true);
+  const messageText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+  const inlineMessageText = 'Lorem ipsum dolor sit amet';
+
+  const handleMessageDismissClick = () => {
+    setIsMessageOpen(false);
+  };
+
+  return (
+    <div>
+      {isMessageOpen && (
+        <Message onDismiss={handleMessageDismissClick} {...props}>
+          <Message.Header>Title</Message.Header>
+          <p>{props.compact ? inlineMessageText : messageText}</p>
+        </Message>
+      )}
+    </div>
+  );
+};
 
 export const Theme = () => {
   // state
@@ -57,19 +80,6 @@ export const Theme = () => {
     },
   ];
 
-  // handlers
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
-  const handleClear = () => {
-    setInputValue('');
-  };
-
-  const handleCheckboxOnChange = () => {
-    setIsCheckboxChecked(!isCheckboxChecked);
-  };
-
   const panes = [
     {
       menuItem: {
@@ -102,6 +112,19 @@ export const Theme = () => {
       render: () => <Tab.Pane>Some content for Performance</Tab.Pane>,
     },
   ];
+
+  // handlers
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleClear = () => {
+    setInputValue('');
+  };
+
+  const handleCheckboxOnChange = () => {
+    setIsCheckboxChecked(!isCheckboxChecked);
+  };
 
   return (
     <div>
@@ -215,6 +238,7 @@ export const Theme = () => {
           </div>
         </Segment>
       </div>
+
       <div className='section'>
         <Segment>
           <Header as='h2' dividing>
@@ -281,6 +305,7 @@ export const Theme = () => {
           />
         </Segment>
       </div>
+
       <div className='section'>
         <Segment padded>
           <Header as='h2' dividing>
@@ -327,6 +352,57 @@ export const Theme = () => {
           </div>
         </Segment>
       </div>
+
+      <div className='section'>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Message
+          </Header>
+          <MessageExample />
+
+          <Header size='small' dividing>
+            Info
+          </Header>
+          <MessageExample info />
+
+          <Header size='small' dividing>
+            Warning
+          </Header>
+          <MessageExample warning />
+
+          <Header size='small' dividing>
+            Positive
+          </Header>
+          <MessageExample positive />
+
+          <Header size='small' dividing>
+            Success
+          </Header>
+          <MessageExample success />
+
+          <Header size='small' dividing>
+            Negative
+          </Header>
+          <MessageExample negative />
+
+          <Header size='small' dividing>
+            Error
+          </Header>
+          <MessageExample error />
+
+          <Segment>
+            <Header size='small' dividing>
+              Compact (inline)
+            </Header>
+            <MessageExample compact size='mini' />
+            <MessageExample compact color='red' size='mini' />
+            <MessageExample compact color='green' size='mini' />
+            <MessageExample compact color='yellow' size='mini' />
+            <MessageExample compact color='blue' size='mini' />
+          </Segment>
+        </Segment>
+      </div>
+
       <div className='section'>
         <Segment padded>
           <Header as='h2' dividing>
