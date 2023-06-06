@@ -1,3 +1,56 @@
 /* message */
 
+.ui.message {
+  padding: var(--spacing-2);
+  border-radius: 0;
+}
 
+.ui.message,
+.ui.message .header {
+  font-family: var(--gotham);
+  font-weight: 400;
+}
+
+/* icons */
+.ui.icon.message > .icon:not(.close) {
+  opacity: 1;
+  font-size: 2em;
+  color: var(--shade-white);
+}
+
+.ui.warning.message > .close.icon,
+.ui.negative.message > .close.icon,
+.ui.error.message > .close.icon {
+  color: var(--shade-white);
+}
+
+/* states */
+
+.ui.success.message,
+.ui.positive.message,
+.ui.success.message .header,
+.ui.positive.message .header {
+  background-color: var(--primary-pms-362-900);
+  color: var(--shade-white);
+  border: none;
+}
+
+.ui.info.message,
+.ui.info.message .header {
+  background-color: var(--secondary-pms-7462-900);
+  color: var(--shade-white);
+  border: none;
+}
+
+.ui.warning.message {
+  background-color: var(--alert-warning-900);
+  color: var(--shade-black);
+  border: none;
+}
+
+.ui.error.message,
+.ui.negative.message {
+  background-color: var(--alert-error-900);
+  color: var(--shade-black);
+  border: none;
+}

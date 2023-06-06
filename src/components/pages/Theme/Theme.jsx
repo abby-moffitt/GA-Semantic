@@ -23,9 +23,6 @@ import './Theme.css';
 
 const MessageExample = (props) => {
   const [isMessageOpen, setIsMessageOpen] = useState(true);
-  const messageText =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-  const inlineMessageText = 'Lorem ipsum dolor sit amet';
 
   const handleMessageDismissClick = () => {
     setIsMessageOpen(false);
@@ -34,10 +31,7 @@ const MessageExample = (props) => {
   return (
     <div>
       {isMessageOpen && (
-        <Message onDismiss={handleMessageDismissClick} {...props}>
-          <Message.Header>Title</Message.Header>
-          <p>{props.compact ? inlineMessageText : messageText}</p>
-        </Message>
+        <Message onDismiss={handleMessageDismissClick} {...props} />
       )}
     </div>
   );
@@ -112,6 +106,10 @@ export const Theme = () => {
       render: () => <Tab.Pane>Some content for Performance</Tab.Pane>,
     },
   ];
+
+  const messageText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+  const inlineMessageText = 'Lorem ipsum dolor sit amet';
 
   // handlers
   const handleInputChange = (e) => {
@@ -358,37 +356,41 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Message
           </Header>
-          <MessageExample />
+          <MessageExample content={messageText} />
 
           <Header size='small' dividing>
             Info
           </Header>
-          <MessageExample info />
+          <MessageExample content={messageText} info icon='info circle' />
 
           <Header size='small' dividing>
             Warning
           </Header>
-          <MessageExample warning />
+          <MessageExample content={messageText} warning icon='warning sign' />
 
           <Header size='small' dividing>
             Positive
           </Header>
-          <MessageExample positive />
+          <MessageExample content={messageText} positive icon='check circle' />
 
           <Header size='small' dividing>
             Success
           </Header>
-          <MessageExample success />
+          <MessageExample content={messageText} success icon='check circle' />
 
           <Header size='small' dividing>
             Negative
           </Header>
-          <MessageExample negative />
+          <MessageExample
+            content={messageText}
+            negative
+            icon='warning circle'
+          />
 
           <Header size='small' dividing>
             Error
           </Header>
-          <MessageExample error />
+          <MessageExample content={messageText} error icon='warning circle' />
 
           <Segment>
             <Header size='small' dividing>
