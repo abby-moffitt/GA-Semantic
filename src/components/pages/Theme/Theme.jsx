@@ -165,8 +165,19 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Divider
           </Header>
-
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a
+            risus metus. Morbi sed augue in lorem lobortis tempor. Proin arcu
+            nisl, elementum sit amet odio finibus, porta accumsan tellus. Sed a
+            vestibulum lectus.
+          </h4>
           <Divider />
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a
+            risus metus. Morbi sed augue in lorem lobortis tempor. Proin arcu
+            nisl, elementum sit amet odio finibus, porta accumsan tellus. Sed a
+            vestibulum lectus.
+          </h4>
         </Segment>
       </div>
 
