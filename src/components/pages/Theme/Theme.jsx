@@ -388,10 +388,10 @@ export const Theme = () => {
           />
 
           <Header size='small' dividing>
-            Yellow
+            Orange
           </Header>
           <MessageExample
-            color='yellow'
+            color='orange'
             content={messageText}
             icon='warning sign'
             size='mini'

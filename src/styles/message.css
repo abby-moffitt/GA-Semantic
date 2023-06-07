@@ -87,7 +87,7 @@
   color: var(--primary-process-blue-900);
 }
 
-.ui.yellow.message {
+.ui.orange.message {
   box-shadow: none;
   border: 1px solid var(--alert-warning-900);
   border-width: 1px 0;
@@ -95,7 +95,7 @@
   color: var(--shade-black);
   padding: var(--spacing-1);
 }
-.ui.yellow.message > .icon:not(.close) {
+.ui.orange.message > .icon:not(.close) {
   color: var(--alert-warning-900);
 }
 
