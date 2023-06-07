@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // semantic
 import {
   Button,
-  Divider,
   Checkbox,
+  Divider,
   Dropdown,
   Form,
   Header,
@@ -368,73 +368,54 @@ export const Theme = () => {
           <MessageExample content={messageText} warning icon='warning sign' />
 
           <Header size='small' dividing>
-            Positive
-          </Header>
-          <MessageExample content={messageText} positive icon='check circle' />
-
-          <Header size='small' dividing>
-            Success
+            Positive/success
           </Header>
           <MessageExample content={messageText} success icon='check circle' />
 
           <Header size='small' dividing>
-            Negative
-          </Header>
-          <MessageExample
-            content={messageText}
-            icon='warning circle'
-            negative
-          />
-
-          <Header size='small' dividing>
-            Error
+            Negative/error
           </Header>
           <MessageExample content={messageText} error icon='warning circle' />
 
-          <Segment>
-            <Header size='small' dividing>
-              Inline (secondary)
-            </Header>
-            <Header size='small' dividing>
-              Info (blue)
-            </Header>
-            <MessageExample
-              color='blue'
-              content={messageText}
-              icon='info circle'
-              size='mini'
-            />
+          <Header size='small' dividing>
+            Blue
+          </Header>
+          <MessageExample
+            color='blue'
+            content={messageText}
+            icon='info circle'
+            size='mini'
+          />
 
-            <Header size='small' dividing>
-              Warning (yellow)
-            </Header>
-            <MessageExample
-              color='yellow'
-              content={messageText}
-              icon='warning sign'
-              size='mini'
-            />
+          <Header size='small' dividing>
+            Yellow
+          </Header>
+          <MessageExample
+            color='yellow'
+            content={messageText}
+            icon='warning sign'
+            size='mini'
+          />
 
-            <Header size='small' dividing>
-              Positive/success (green)
-            </Header>
-            <MessageExample
-              color='green'
-              content={messageText}
-              icon='check circle'
-              size='mini'
-            />
+          <Header size='small' dividing>
+            Green
+          </Header>
+          <MessageExample
+            color='green'
+            content={messageText}
+            icon='check circle'
+            size='mini'
+          />
 
-            <Header size='small' dividing>
-              Negative/error (red)
-            </Header>
-            <MessageExample
-              color='red'
-              content={messageText}
-              icon='warning circle'
-              size='mini'
-            />
-          </Segment>
+          <Header size='small' dividing>
+            Red
+          </Header>
+          <MessageExample
+            color='red'
+            content={messageText}
+            icon='warning circle'
+            size='mini'
+          />
         </Segment>
       </div>
 

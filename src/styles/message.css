@@ -3,6 +3,7 @@
 .ui.message {
   padding: var(--spacing-2);
   border-radius: 0;
+  box-shadow: none;
 }
 
 .ui.message,
@@ -30,6 +31,7 @@
   background-color: var(--primary-pms-362-900);
   color: var(--shade-white);
   border: none;
+  box-shadow: none;
 
   &.icon {
     color: var(--shade-white);
@@ -41,6 +43,7 @@
   background-color: var(--secondary-pms-7462-900);
   color: var(--shade-white);
   border: none;
+  box-shadow: none;
 
   &.icon {
     color: var(--shade-white);
@@ -51,6 +54,7 @@
   background-color: var(--alert-warning-900);
   color: var(--shade-black);
   border: none;
+  box-shadow: none;
 
   &.icon {
     color: var(--shade-white);
@@ -62,13 +66,14 @@
   background-color: var(--alert-error-900);
   color: var(--shade-black);
   border: none;
+  box-shadow: none;
 
   &.icon {
     color: var(--shade-white);
   }
 }
 
-/* inline colors */
+/* colors */
 
 .ui.blue.message {
   box-shadow: none;
