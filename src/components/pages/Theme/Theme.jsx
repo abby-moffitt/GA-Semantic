@@ -115,21 +115,23 @@ export const Theme = () => {
             Button
           </Header>
 
-          <div className='row'>
-            <Button size='small'>Small Primary</Button>
-            <Button size='medium'>Medium Primary</Button>
-            <Button size='large'>Large Primary</Button>
-          </div>
-          <div className='row'>
-            <Button secondary size='small'>
-              Small Secondary
-            </Button>
-            <Button secondary size='medium'>
-              Medium Secondary
-            </Button>
-            <Button secondary size='large'>
-              Large Secondary
-            </Button>
+          <div className='column'>
+            <div className='row'>
+              <Button size='small'>Small Primary</Button>
+              <Button size='medium'>Medium Primary</Button>
+              <Button size='large'>Large Primary</Button>
+            </div>
+            <div className='row'>
+              <Button secondary size='small'>
+                Small Secondary
+              </Button>
+              <Button secondary size='medium'>
+                Medium Secondary
+              </Button>
+              <Button secondary size='large'>
+                Large Secondary
+              </Button>
+            </div>
           </div>
         </Segment>
       </div>
@@ -165,19 +167,25 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Divider
           </Header>
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a
-            risus metus. Morbi sed augue in lorem lobortis tempor. Proin arcu
-            nisl, elementum sit amet odio finibus, porta accumsan tellus. Sed a
-            vestibulum lectus.
-          </h4>
-          <Divider />
-          <h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a
-            risus metus. Morbi sed augue in lorem lobortis tempor. Proin arcu
-            nisl, elementum sit amet odio finibus, porta accumsan tellus. Sed a
-            vestibulum lectus.
-          </h4>
+          <div className='column'>
+            <div>
+              <p>
+                Some text <strong>above</strong> the divider consectetur
+                adipiscing elit.. Cras a risus metus. Morbi sed augue in lorem
+                lobortis tempor. Proin arcu nisl, elementum sit amet odio
+                finibus, porta accumsan tellus. Sed a vestibulum lectus.
+              </p>
+            </div>
+            <Divider />
+            <div>
+              <p>
+                Different text <strong>below</strong> the divider, consectetur
+                adipiscing elit. Cras a risus metus. Morbi sed augue in lorem
+                lobortis tempor. Proin arcu nisl, elementum sit amet odio
+                finibus, porta accumsan tellus. Sed a vestibulum lectus.
+              </p>
+            </div>
+          </div>
         </Segment>
       </div>
 
