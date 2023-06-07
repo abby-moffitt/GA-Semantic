@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import {
   Checkbox,
   Button,
+  Divider,
   Dropdown,
   Form,
   Header,
@@ -156,6 +157,16 @@ export const Theme = () => {
             <Form.Checkbox label='Form checkbox' />
           </div>
           <Form.Field control={Checkbox} label='Form field' />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment>
+          <Header as='h2' dividing>
+            Divider
+          </Header>
+
+          <Divider />
         </Segment>
       </div>
 
