@@ -1,8 +1,8 @@
 /* divider */
 
-.ui.divider {
+.ui.divider:not(.vertical):not(.horizontal) {
   background-color: var(--neutral-500);
-  border: none !important;
+  border: none;
   margin: 0;
   flex-shrink: 0;
   width: 100%;
