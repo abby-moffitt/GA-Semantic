@@ -1,0 +1,130 @@
+/* message */
+
+.ui.message {
+  padding: var(--spacing-2);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.ui.message,
+.ui.message .header {
+  font-family: var(--gotham);
+  font-weight: 400;
+}
+
+.ui.message > .content {
+  padding-right: var(--spacing-1);
+}
+
+/* icons */
+.ui.icon.message > .icon:not(.close) {
+  opacity: 1;
+  font-size: 1.8em;
+}
+
+/* primary states */
+
+.ui.success.message,
+.ui.positive.message,
+.ui.success.message .header,
+.ui.positive.message .header {
+  background-color: var(--primary-pms-362-900);
+  color: var(--shade-white);
+  border: none;
+  box-shadow: none;
+
+  &.icon {
+    color: var(--shade-white);
+  }
+}
+
+.ui.info.message,
+.ui.info.message .header {
+  background-color: var(--secondary-pms-7462-900);
+  color: var(--shade-white);
+  border: none;
+  box-shadow: none;
+
+  &.icon {
+    color: var(--shade-white);
+  }
+}
+
+.ui.warning.message {
+  background-color: var(--alert-warning-900);
+  color: var(--shade-black);
+  border: none;
+  box-shadow: none;
+
+  &.icon {
+    color: var(--shade-white);
+  }
+}
+
+.ui.error.message,
+.ui.negative.message {
+  background-color: var(--alert-error-900);
+  color: var(--shade-black);
+  border: none;
+  box-shadow: none;
+
+  &.icon {
+    color: var(--shade-white);
+  }
+}
+
+/* colors */
+
+.ui.blue.message {
+  box-shadow: none;
+  border: 1px solid var(--primary-process-blue-900);
+  border-width: 1px 0;
+  background-color: var(--primary-pms-298-600);
+  color: var(--shade-black);
+  padding: var(--spacing-1);
+}
+.ui.blue.message > .icon:not(.close) {
+  color: var(--primary-process-blue-900);
+}
+
+.ui.orange.message {
+  box-shadow: none;
+  border: 1px solid var(--alert-warning-900);
+  border-width: 1px 0;
+  background-color: var(--alert-warning-600);
+  color: var(--shade-black);
+  padding: var(--spacing-1);
+}
+.ui.orange.message > .icon:not(.close) {
+  color: var(--alert-warning-900);
+}
+
+.ui.green.message {
+  box-shadow: none;
+  border: 1px solid var(--primary-pms-362-900);
+  border-width: 1px 0;
+  background-color: var(--primary-pms-362-600);
+  color: var(--shade-black);
+  padding: var(--spacing-1);
+}
+.ui.green.message > .icon:not(.close) {
+  color: var(--primary-pms-362-900);
+}
+
+.ui.red.message {
+  box-shadow: none;
+  border: 1px solid var(--alert-error-900);
+  border-width: 1px 0;
+  background-color: var(--alert-error-600);
+  color: var(--shade-black);
+  padding: var(--spacing-1);
+}
+.ui.red.message > .icon:not(.close) {
+  color: var(--alert-error-900);
+}
+
+/* size */
+.ui.mini.message > .icon:not(.close),
+.ui.small.message > .icon:not(.close) {
+  font-size: 1.4em;
+}
