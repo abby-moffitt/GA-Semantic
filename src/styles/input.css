@@ -7,7 +7,9 @@
   font-size: var(--font-size);
 }
 
-.ui.input > input:focus {
+.ui.input > input:focus,
+.ui.form input[type='text']:focus,
+.ui.form textarea:focus {
   border-color: var(--primary-pms-362-900);
 }
 
