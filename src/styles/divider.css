@@ -1,0 +1,19 @@
+/* divider */
+
+.ui.divider {
+  background-color: var(--neutral-500);
+  margin: 0;
+  flex-shrink: 0;
+  width: 100%;
+  text-transform: none;
+  height: 1px;
+}
+
+.ui.divider:not(.vertical):not(.horizontal) {
+  border: none;
+}
+
+.ui.divider.horizontal,
+.ui.divider.vertical {
+  background-color: transparent;
+}

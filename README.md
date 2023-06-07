@@ -40,6 +40,14 @@ Below are the Semantic UI components that have custom styles applied to them:
     <td>High</td>
   </tr>
   <tr>
+    <td><a href="https://react.semantic-ui.com/elements/divider/" target="_blank">Divider</a></td>
+    <td>Element</td>
+    <td>divider.css</td>
+    <td>Low</td>
+    <td>Low</td>
+    <td>High</td>
+  </tr>
+  <tr>
     <td><a href="https://react.semantic-ui.com/modules/dropdown/" target="_blank">Dropdown</a></td>
     <td>Module</td>
     <td>dropdown.css</td>

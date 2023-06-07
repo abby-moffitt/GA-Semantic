@@ -2,10 +2,14 @@
   margin: 0 0 var(--spacing-3) 0;
 }
 
-.row {
+.row,
+.column {
   display: flex;
-  gap: var(--spacing-1);
-  margin: var(--spacing-2) 0;
+  gap: var(--spacing-2);
+}
+
+.column {
+  flex-direction: column;
 }
 
 .dropdownBox {
