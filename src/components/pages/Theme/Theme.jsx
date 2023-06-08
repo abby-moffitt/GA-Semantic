@@ -434,13 +434,23 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Modal
           </Header>
+
+          <Button onClick={handleOpenModal}>Open Modal</Button>
+
+          <Header size='small' dividing>
+            Modal trigger
+          </Header>
           <Modal
             onClose={handleCloseModal}
             onOpen={handleOpenModal}
             open={isModalOpen}
-            trigger={<Button>Open Modal</Button>}
+            trigger={<Button>Open Modal (trigger)</Button>}
+            closeIcon
           >
-            <Modal.Header>Title</Modal.Header>
+            <Modal.Header>
+              <Header as='h2'>Heading 2</Header>
+            </Modal.Header>
+
             <Modal.Content>
               <Modal.Description>
                 <p>{contentText}</p>
@@ -448,14 +458,12 @@ export const Theme = () => {
             </Modal.Content>
 
             <Modal.Actions>
-              <Button onClick={handleCloseModal}>Cancel</Button>
-              <Button
-                content='Confirm'
-                icon='checkmark'
-                labelPosition='right'
-                onClick={handleCloseModal}
-                positive
-              />
+              <Button secondary size='small' onClick={handleCloseModal}>
+                Cancel
+              </Button>
+              <Button size='small' onClick={handleCloseModal}>
+                Confirm
+              </Button>
             </Modal.Actions>
           </Modal>
         </Segment>

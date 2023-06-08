@@ -1,3 +1,74 @@
 /* modal */
 
+.ui.modal {
+  background-color: var(--shade-white);
+  border-radius: 0;
+  box-shadow: none;
+}
 
+.ui.modal > .icon:first-child + * {
+  border-radius: 0;
+}
+
+/* close icon */
+
+.ui.modal > .close {
+  color: var(--shade-white);
+  font-size: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  right: var(--spacing-2);
+  top: var(--spacing-3);
+  width: 1.5rem;
+}
+
+@media only screen and (max-width: 991px) {
+  .ui.modal > .close {
+    color: var(--shade-white);
+    font-size: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    right: var(--spacing-2);
+    top: var(--spacing-3);
+    width: 1.5rem;
+  }
+}
+
+/* title */
+
+.ui.modal > .header {
+  background: var(--primary-pms-539-900);
+  border-bottom: none;
+  color: var(--shade-white);
+  padding: var(--spacing-2) var(--spacing-3);
+}
+
+.ui.modal > .header:not(.ui) {
+  font-family: var(--gotham);
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  line-height: var(--h2-line-height);
+}
+
+.ui.modal > .header > .ui.header {
+  color: var(--shade-white);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* content */
+
+.ui.modal > .content {
+  background: var(--shade-white);
+  font-family: var(--gotham);
+  padding: var(--spacing-3);
+}
+
+/* actions */
+
+.ui.modal > .actions {
+  background: var(--shade-white);
+  border-top: 0;
+  padding: var(--spacing-3);
+  padding-top: 0;
+}
