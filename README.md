@@ -88,6 +88,14 @@ Below are the Semantic UI components that have custom styles applied to them:
     <td>High</td>
   </tr>
   <tr>
+    <td><a href="https://react.semantic-ui.com/modules/modal" target="_blank">Modal</a></td>
+    <td>Module</td>
+    <td>modal.css</td>
+    <td>Medium</td>
+    <td>High</td>
+    <td>High</td>
+  </tr>
+  <tr>
     <td><a href="https://react.semantic-ui.com/elements/segment/" target="_blank">Segment</a></td>
     <td>Element</td>
     <td>segment.css</td>
