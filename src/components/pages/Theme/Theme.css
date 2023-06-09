@@ -20,3 +20,7 @@
 .dropdownBox .dropdown {
   margin: 5px 0;
 }
+
+.ui.form .field.formLabel > label {
+  text-transform: capitalize;
+}

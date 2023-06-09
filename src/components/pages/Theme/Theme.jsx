@@ -110,6 +110,21 @@ export const Theme = () => {
   const messageText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
+  const inputTypes = [
+    'color',
+    'date',
+    'datetime-local',
+    'email',
+    'file',
+    'number',
+    'password',
+    'search',
+    'tel',
+    'text',
+    'time',
+    'url',
+  ];
+
   // handlers
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -248,6 +263,9 @@ export const Theme = () => {
               <Input id='input-default' placeholder='Input' />
             </Form.Field>
 
+            <Header size='small' dividing>
+              Sates
+            </Header>
             <Form.Field className='error'>
               <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder='Input' />
@@ -263,6 +281,9 @@ export const Theme = () => {
               <Input id='input-disabled' placeholder='Input' />
             </Form.Field>
 
+            <Header size='small' dividing>
+              Types
+            </Header>
             <Form.Field
               control={Select}
               label='Dropdown'
@@ -273,10 +294,20 @@ export const Theme = () => {
               placeholder='Select options'
             />
 
+            {inputTypes.map((type) => (
+              <Form.Field
+                className='formLabel'
+                control='input'
+                key={`input-${type}`}
+                label={type}
+                type={type}
+              />
+            ))}
+
             <Form.Field
               control={TextArea}
-              label='About'
-              placeholder='Tell us more about you...'
+              label='Textarea'
+              placeholder='Type your text here...'
             />
           </Form>
         </Segment>
