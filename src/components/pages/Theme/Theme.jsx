@@ -280,35 +280,6 @@ export const Theme = () => {
               <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder='Input' />
             </Form.Field>
-
-            <Header size='small' dividing>
-              Types
-            </Header>
-            <Form.Field
-              control={Select}
-              label='Dropdown'
-              options={[
-                { key: 'option1', text: 'Option 1', value: 'option1' },
-                { key: 'option2', text: 'Option 2', value: 'option2' },
-              ]}
-              placeholder='Select options'
-            />
-
-            {inputTypes.map((type) => (
-              <Form.Field
-                className='formLabel'
-                control='input'
-                key={`input-${type}`}
-                label={type}
-                type={type}
-              />
-            ))}
-
-            <Form.Field
-              control={TextArea}
-              label='Textarea'
-              placeholder='Type your text here...'
-            />
           </Form>
         </Segment>
       </div>
@@ -331,6 +302,31 @@ export const Theme = () => {
               )
             }
           />
+
+          <Header size='small' dividing>
+            Types
+          </Header>
+          <Form>
+            <Form.Field
+              control={Select}
+              label='Dropdown'
+              options={[
+                { key: 'option1', text: 'Option 1', value: 'option1' },
+                { key: 'option2', text: 'Option 2', value: 'option2' },
+              ]}
+              placeholder='Select options'
+            />
+
+            {inputTypes.map((type) => (
+              <Form.Field
+                className='formLabel'
+                control='input'
+                key={`input-${type}`}
+                label={type}
+                type={type}
+              />
+            ))}
+          </Form>
         </Segment>
       </div>
 
@@ -456,6 +452,22 @@ export const Theme = () => {
             Tab
           </Header>
           <Tab panes={panes} />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment>
+          <Header as='h2' dividing>
+            Text Area
+          </Header>
+
+          <Form>
+            <Form.Field
+              control={TextArea}
+              label='Textarea'
+              placeholder='Type your text here...'
+            />
+          </Form>
         </Segment>
       </div>
 
