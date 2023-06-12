@@ -3,7 +3,7 @@
 .ui.modal {
   background-color: var(--shade-white);
   border-radius: 0;
-  box-shadow: none;
+  box-shadow: var(--box-shadow-5);
 }
 
 .ui.modal > .icon:first-child + * {
@@ -19,6 +19,7 @@
   padding: 0;
   right: var(--spacing-2);
   top: var(--spacing-3);
+  transition: opacity var(--transition-hover);
   width: 1.5rem;
 }
 
@@ -30,6 +31,7 @@
     padding: 0;
     right: var(--spacing-2);
     top: var(--spacing-3);
+    transition: opacity var(--transition-hover);
     width: 1.5rem;
   }
 }
