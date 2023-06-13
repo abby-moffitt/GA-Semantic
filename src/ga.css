@@ -1,5 +1,4 @@
 @import 'styles/variables.css';
-
 @import 'styles/button.css';
 @import 'styles/checkbox.css';
 @import 'styles/divider.css';
@@ -11,3 +10,4 @@
 @import 'styles/menu.css';
 @import 'styles/message.css';
 @import 'styles/segment.css';
+@import 'styles/table.css';

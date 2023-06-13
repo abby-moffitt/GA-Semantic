@@ -1,0 +1,25 @@
+/* table */
+
+table.ui.table {
+  border: none;
+}
+
+/** header **/
+
+table.ui.table thead tr th {
+  color: var(--primary-pms-539-900);
+  line-height: 24px;
+  background-color: var(--shade-white);
+  border: none;
+  padding: var(--spacing-2);
+}
+
+/** cell **/
+
+table.ui.table tbody tr td {
+  color: var(--primary-pms-539-900);
+  line-height: 24px;
+  font-weight: 400;
+  padding: var(--spacing-2) var(--spacing-3);
+  align-items: center;
+}

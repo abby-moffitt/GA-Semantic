@@ -15,6 +15,7 @@ import {
   Segment,
   Select,
   Tab,
+  Table,
   TextArea,
 } from 'semantic-ui-react';
 
@@ -425,6 +426,85 @@ export const Theme = () => {
             Tab
           </Header>
           <Tab panes={panes} />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Table
+          </Header>
+          <Table>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell>Transaction Name</Table.HeaderCell>
+                <Table.HeaderCell>Status</Table.HeaderCell>
+                <Table.HeaderCell textAlign='right'>Amount</Table.HeaderCell>
+                <Table.HeaderCell textAlign='center'>Actions</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row verticalAlign='middle'>
+                <Table.Cell>Anniversary</Table.Cell>
+                <Table.Cell>
+                  <div className='status'>
+                    <Icon
+                      verticalAlign='middle'
+                      className='checkIcon'
+                      name='check circle'
+                    />
+                    Complete
+                  </div>
+                </Table.Cell>
+                <Table.Cell textAlign='right'>$1,293.17</Table.Cell>
+                <Table.Cell textAlign='center'>
+                  <Button size='medium'>Confirm</Button>
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Renewal</Table.Cell>
+                <Table.Cell>
+                  <div className='status'>
+                    <Icon className='errorIcon' name='warning circle' />
+                    Incomplete
+                  </div>
+                </Table.Cell>
+                <Table.Cell textAlign='right'>$2,351.92</Table.Cell>
+                <Table.Cell textAlign='center'>
+                  <Label basic color='green'>
+                    Approved
+                  </Label>
+                </Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Calendar Year End</Table.Cell>
+                <Table.Cell>
+                  <div className='status'>
+                    <Icon className='warningIcon' name='exclamation triangle' />
+                    Pending
+                  </div>
+                </Table.Cell>
+                <Table.Cell textAlign='right'>$5,479.34</Table.Cell>
+                <Table.Cell textAlign='center'>No Actions</Table.Cell>
+              </Table.Row>
+              <Table.Row>
+                <Table.Cell>Issue</Table.Cell>
+                <Table.Cell>
+                  <div className='status'>
+                    <Icon className='checkIcon' name='check circle' />
+                    Complete
+                  </div>
+                </Table.Cell>
+                <Table.Cell textAlign='right'>$3,419.87</Table.Cell>
+                <Table.Cell textAlign='center'>
+                  <Checkbox
+                    label='Action Required'
+                    onChange={handleCheckboxOnChange}
+                  />
+                </Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
         </Segment>
       </div>
 
