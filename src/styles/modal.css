@@ -36,6 +36,23 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .ui.modal > .close {
+    color: var(--shade-white);
+    font-size: 1.5rem;
+    height: 1.5rem;
+    padding: var(--spacing-2) 0;
+    right: var(--spacing-2);
+    top: var(--spacing-3);
+    transition: opacity var(--transition-hover);
+    width: 1.5rem;
+  }
+
+  .ui.modal > .actions {
+    margin-bottom: var(--spacing-3);
+  }
+}
+
 /* title */
 
 .ui.modal > .header {
