@@ -470,11 +470,8 @@ export const Theme = () => {
                   </div>
                 </Table.Cell>
                 <Table.Cell textAlign='right'>$2,351.92</Table.Cell>
-                <Table.Cell textAlign='center'>
-                  <Label basic color='green'>
-                    Approved
-                  </Label>
-                </Table.Cell>
+
+                <Table.Cell textAlign='center'>No Actions</Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell>Calendar Year End</Table.Cell>
@@ -485,7 +482,12 @@ export const Theme = () => {
                   </div>
                 </Table.Cell>
                 <Table.Cell textAlign='right'>$5,479.34</Table.Cell>
-                <Table.Cell textAlign='center'>No Actions</Table.Cell>
+                <Table.Cell textAlign='center'>
+                  <Checkbox
+                    label='Action Required'
+                    onChange={handleCheckboxOnChange}
+                  />
+                </Table.Cell>
               </Table.Row>
               <Table.Row>
                 <Table.Cell>Issue</Table.Cell>
@@ -496,11 +498,11 @@ export const Theme = () => {
                   </div>
                 </Table.Cell>
                 <Table.Cell textAlign='right'>$3,419.87</Table.Cell>
+
                 <Table.Cell textAlign='center'>
-                  <Checkbox
-                    label='Action Required'
-                    onChange={handleCheckboxOnChange}
-                  />
+                  <Label basic color='green'>
+                    Approved
+                  </Label>
                 </Table.Cell>
               </Table.Row>
             </Table.Body>
