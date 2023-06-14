@@ -12,11 +12,37 @@
   flex-direction: column;
 }
 
-.dropdownBox {
-  display: flex;
-  flex-direction: column;
+/* grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2);
 }
 
-.dropdownBox .dropdown {
-  margin: 5px 0;
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid .ui.input input,
+.grid .field input {
+  width: 100%;
+}
+
+/* formLabel */
+
+.ui.form .field.formLabel {
+  margin: 0;
+}
+
+.ui.form .field.formLabel > label {
+  text-transform: capitalize;
 }

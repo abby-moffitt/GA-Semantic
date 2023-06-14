@@ -110,6 +110,21 @@ export const Theme = () => {
   const messageText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
+  const inputTypes = [
+    'color',
+    'date',
+    'datetime-local',
+    'email',
+    'file',
+    'number',
+    'password',
+    'search',
+    'tel',
+    'text',
+    'time',
+    'url',
+  ];
+
   // handlers
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -214,7 +229,7 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Dropdown
           </Header>
-          <div className='dropdownBox'>
+          <div className='column'>
             <Dropdown
               options={dropdownOptions}
               placeholder='Select'
@@ -233,6 +248,21 @@ export const Theme = () => {
               selection
             />
           </div>
+
+          <Header size='small' dividing>
+            Form Field
+          </Header>
+          <Form>
+            <Form.Field
+              control={Select}
+              label='Dropdown'
+              options={[
+                { key: 'option1', text: 'Option 1', value: 'option1' },
+                { key: 'option2', text: 'Option 2', value: 'option2' },
+              ]}
+              placeholder='Select options'
+            />
+          </Form>
         </Segment>
       </div>
 
@@ -248,6 +278,9 @@ export const Theme = () => {
               <Input id='input-default' placeholder='Input' />
             </Form.Field>
 
+            <Header size='small' dividing>
+              States
+            </Header>
             <Form.Field className='error'>
               <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder='Input' />
@@ -262,22 +295,6 @@ export const Theme = () => {
               <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder='Input' />
             </Form.Field>
-
-            <Form.Field
-              control={Select}
-              label='Dropdown'
-              options={[
-                { key: 'option1', text: 'Option 1', value: 'option1' },
-                { key: 'option2', text: 'Option 2', value: 'option2' },
-              ]}
-              placeholder='Select options'
-            />
-
-            <Form.Field
-              control={TextArea}
-              label='About'
-              placeholder='Tell us more about you...'
-            />
           </Form>
         </Segment>
       </div>
@@ -288,18 +305,41 @@ export const Theme = () => {
             Input
           </Header>
 
-          <Input
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder='Text input'
-            icon={
-              inputValue.length === 0 ? (
-                ''
-              ) : (
-                <Icon name='times circle outline' onClick={handleClear} link />
-              )
-            }
-          />
+          <div className='grid'>
+            <Input
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder='Text input'
+              icon={
+                inputValue.length === 0 ? (
+                  ''
+                ) : (
+                  <Icon
+                    name='times circle outline'
+                    onClick={handleClear}
+                    link
+                  />
+                )
+              }
+            />
+          </div>
+
+          <Header size='small' dividing>
+            Types
+          </Header>
+          <Form>
+            <div className='grid'>
+              {inputTypes.map((type, index) => (
+                <Form.Field
+                  className='formLabel'
+                  control='input'
+                  key={`input-type-${index}`}
+                  label={type}
+                  type={type}
+                />
+              ))}
+            </div>
+          </Form>
         </Segment>
       </div>
 
@@ -425,6 +465,22 @@ export const Theme = () => {
             Tab
           </Header>
           <Tab panes={panes} />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment>
+          <Header as='h2' dividing>
+            Text Area
+          </Header>
+
+          <Form>
+            <Form.Field
+              control={TextArea}
+              label='Textarea'
+              placeholder='Type your text here...'
+            />
+          </Form>
         </Segment>
       </div>
 

@@ -13,6 +13,11 @@
   text-transform: none;
 }
 
+/* Focus */
+.ui.form .field:focus-within > label {
+  color: var(--primary-pms-362-900);
+}
+
 /* Error */
 .ui.form .field.error > label {
   color: var(--alert-error-900);
