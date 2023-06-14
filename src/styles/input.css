@@ -1,11 +1,29 @@
-.ui.input > input {
-  padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
-  line-height: var(--line-height);
+/* input */
+
+.ui.input > input,
+.ui.form input[type='date'],
+.ui.form input[type='datetime-local'],
+.ui.form input[type='email'],
+.ui.form input[type='file'],
+.ui.form input[type='number'],
+.ui.form input[type='password'],
+.ui.form input[type='search'],
+.ui.form input[type='tel'],
+.ui.form input[type='text'],
+.ui.form input[type='time'],
+.ui.form input[type='url'],
+.ui.form textarea {
+  background: var(--shade-white);
   border-radius: var(--border-radius-2);
-  background-color: var(--shade-white);
   border: 1px solid var(--neutral-900);
+  box-shadow: none;
+  font-family: var(--gotham);
   font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
 }
+
+/* focus */
 
 .ui.input > input:focus,
 .ui.form input[type='color']:focus,
@@ -24,7 +42,17 @@
   border-color: var(--primary-pms-362-900);
 }
 
-.ui.input > input::placeholder {
+/* placeholder */
+
+.ui.input > input::placeholder,
+.ui.form input[type='email']::placeholder,
+.ui.form input[type='number']::placeholder,
+.ui.form input[type='password']::placeholder,
+.ui.form input[type='search']::placeholder,
+.ui.form input[type='tel']::placeholder,
+.ui.form input[type='text']::placeholder,
+.ui.form input[type='url']::placeholder,
+.ui.form textarea::placeholder {
   color: var(--neutral-900);
   font-weight: 400;
 }

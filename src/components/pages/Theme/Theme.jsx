@@ -346,6 +346,7 @@ export const Theme = () => {
                   key={`input-type-${index}`}
                   label={type}
                   type={type}
+                  placeholder={`${type} input...`}
                 />
               ))}
             </div>
