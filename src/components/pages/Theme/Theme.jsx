@@ -340,6 +340,11 @@ export const Theme = () => {
           <Input error placeholder='Validation error...' />
 
           <Header size='small' dividing>
+            Disabled
+          </Header>
+          <Input disabled placeholder='Disabled input...' />
+
+          <Header size='small' dividing>
             Types
           </Header>
           <Form>
@@ -352,6 +357,7 @@ export const Theme = () => {
                   label={type}
                   type={type}
                   placeholder={`${type} input...`}
+                  disabled
                 />
               ))}
             </div>
@@ -535,14 +541,21 @@ export const Theme = () => {
               <Form.Field
                 control={TextArea}
                 label='Textarea'
-                placeholder='Type your text here...'
+                placeholder='Textarea example...'
               />
 
               <Form.Field
                 control={TextArea}
                 error
                 label='Error'
-                placeholder='Type your text here...'
+                placeholder='Textarea example...'
+              />
+
+              <Form.Field
+                control={TextArea}
+                disabled
+                label='Disabled'
+                placeholder='Textarea example...'
               />
             </div>
           </Form>

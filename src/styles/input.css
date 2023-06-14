@@ -113,13 +113,44 @@
   font-weight: 400;
 }
 
-.ui.input.disabled > input {
+/* disabled */
+
+.ui.input.disabled > input,
+.ui.form .field.disabled input[type='color'],
+.ui.form .field.disabled input[type='date'],
+.ui.form .field.disabled input[type='datetime-local'],
+.ui.form .field.disabled input[type='email'],
+.ui.form .field.disabled input[type='file'],
+.ui.form .field.disabled input[type='number'],
+.ui.form .field.disabled input[type='password'],
+.ui.form .field.disabled input[type='search'],
+.ui.form .field.disabled input[type='tel'],
+.ui.form .field.disabled input[type='text'],
+.ui.form .field.disabled input[type='time'],
+.ui.form .field.disabled input[type='url'],
+.ui.form .field.disabled textarea {
+  color: var(--neutral-700);
   border: 1px solid var(--neutral-700);
 }
 
-.ui.input.disabled > input::placeholder {
-  color: var(--neutral-700);
+.ui.input.disabled > input::placeholder,
+.ui.form .field.disabled input[type='color']::placeholder,
+.ui.form .field.disabled input[type='date']::placeholder,
+.ui.form .field.disabled input[type='datetime-local']::placeholder,
+.ui.form .field.disabled input[type='email']::placeholder,
+.ui.form .field.disabled input[type='file']::placeholder,
+.ui.form .field.disabled input[type='number']::placeholder,
+.ui.form .field.disabled input[type='password']::placeholder,
+.ui.form .field.disabled input[type='search']::placeholder,
+.ui.form .field.disabled input[type='tel']::placeholder,
+.ui.form .field.disabled input[type='text']::placeholder,
+.ui.form .field.disabled input[type='time']::placeholder,
+.ui.form .field.disabled input[type='url']::placeholder,
+.ui.form .field.disabled textarea::placeholder {
+  color: var(--neutral-500);
 }
+
+/* icon */
 
 .ui.input .icon {
   color: var(--tertiary-cool-grey-900);
