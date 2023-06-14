@@ -111,9 +111,18 @@ export const Theme = () => {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
   const inputTypes = [
-    { items: ['color', 'date', 'datetime-local', 'email'] },
-    { items: ['file', 'number', 'password', 'search'] },
-    { items: ['tel', 'text', 'time', 'url'] },
+    'color',
+    'date',
+    'datetime-local',
+    'email',
+    'file',
+    'number',
+    'password',
+    'search',
+    'tel',
+    'text',
+    'time',
+    'url',
   ];
 
   // handlers
@@ -296,35 +305,38 @@ export const Theme = () => {
             Input
           </Header>
 
-          <Input
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder='Text input'
-            icon={
-              inputValue.length === 0 ? (
-                ''
-              ) : (
-                <Icon name='times circle outline' onClick={handleClear} link />
-              )
-            }
-          />
+          <div className='grid'>
+            <Input
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder='Text input'
+              icon={
+                inputValue.length === 0 ? (
+                  ''
+                ) : (
+                  <Icon
+                    name='times circle outline'
+                    onClick={handleClear}
+                    link
+                  />
+                )
+              }
+            />
+          </div>
 
           <Header size='small' dividing>
             Types
           </Header>
           <Form>
-            <div className='column'>
-              {inputTypes.map((row, index) => (
-                <div className='row' key={`row-${index}`}>
-                  {row.items.map((item) => (
-                    <Form.Field
-                      className='formLabel'
-                      control='input'
-                      label={item}
-                      type={item}
-                    />
-                  ))}
-                </div>
+            <div className='grid'>
+              {inputTypes.map((type, index) => (
+                <Form.Field
+                  className='formLabel'
+                  control='input'
+                  key={`input-type-${index}`}
+                  label={type}
+                  type={type}
+                />
               ))}
             </div>
           </Form>
