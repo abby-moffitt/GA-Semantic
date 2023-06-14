@@ -285,7 +285,7 @@ export const Theme = () => {
           <Form>
             <Form.Field required>
               <label htmlFor='input-default'>Label</label>
-              <Input id='input-default' placeholder='Input' />
+              <Input id='input-default' placeholder='Input...' />
             </Form.Field>
 
             <Header size='small' dividing>
@@ -293,17 +293,17 @@ export const Theme = () => {
             </Header>
             <Form.Field className='error'>
               <label htmlFor='input-error'>Error</label>
-              <Input id='input-error' placeholder='Input' />
+              <Input id='input-error' placeholder='Input...' />
             </Form.Field>
 
             <Form.Field className='success'>
               <label htmlFor='input-success'>Success</label>
-              <Input id='input-success' placeholder='Input' />
+              <Input id='input-success' placeholder='Input...' />
             </Form.Field>
 
             <Form.Field className='disabled'>
               <label htmlFor='input-disabled'>Disabled</label>
-              <Input id='input-disabled' placeholder='Input' />
+              <Input id='input-disabled' placeholder='Input...' />
             </Form.Field>
           </Form>
         </Segment>
@@ -319,7 +319,7 @@ export const Theme = () => {
             <Input
               value={inputValue}
               onChange={handleInputChange}
-              placeholder='Text input'
+              placeholder='Text input...'
               icon={
                 inputValue.length === 0 ? (
                   ''
@@ -333,6 +333,11 @@ export const Theme = () => {
               }
             />
           </div>
+
+          <Header size='small' dividing>
+            Error
+          </Header>
+          <Input error placeholder='Validation error...' />
 
           <Header size='small' dividing>
             Types
@@ -526,11 +531,20 @@ export const Theme = () => {
           </Header>
 
           <Form>
-            <Form.Field
-              control={TextArea}
-              label='Textarea'
-              placeholder='Type your text here...'
-            />
+            <div className='column'>
+              <Form.Field
+                control={TextArea}
+                label='Textarea'
+                placeholder='Type your text here...'
+              />
+
+              <Form.Field
+                control={TextArea}
+                error
+                label='Error'
+                placeholder='Type your text here...'
+              />
+            </div>
           </Form>
         </Segment>
       </div>

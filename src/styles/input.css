@@ -17,6 +17,7 @@
   border-radius: var(--border-radius-2);
   border: 1px solid var(--neutral-900);
   box-shadow: none;
+  color: var(--shade-black);
   font-family: var(--gotham);
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -57,14 +58,57 @@
   font-weight: 400;
 }
 
-.ui.input.error > input {
+/* error */
+
+.ui.input.error > input,
+.ui.form .field.error input[type='color'],
+.ui.form .field.error input[type='date'],
+.ui.form .field.error input[type='datetime-local'],
+.ui.form .field.error input[type='email'],
+.ui.form .field.error input[type='file'],
+.ui.form .field.error input[type='number'],
+.ui.form .field.error input[type='password'],
+.ui.form .field.error input[type='search'],
+.ui.form .field.error input[type='tel'],
+.ui.form .field.error input[type='text'],
+.ui.form .field.error input[type='time'],
+.ui.form .field.error input[type='url'],
+.ui.form .field.error textarea {
+  background: var(--shade-white);
   border: 2px solid var(--alert-error-900);
   color: var(--shade-black);
-  background-color: var(--shade-white);
+}
+
+.ui.form .field.error input[type='color']:focus,
+.ui.form .field.error input[type='date']:focus,
+.ui.form .field.error input[type='datetime-local']:focus,
+.ui.form .field.error input[type='email']:focus,
+.ui.form .field.error input[type='file']:focus,
+.ui.form .field.error input[type='number']:focus,
+.ui.form .field.error input[type='password']:focus,
+.ui.form .field.error input[type='search']:focus,
+.ui.form .field.error input[type='tel']:focus,
+.ui.form .field.error input[type='text']:focus,
+.ui.form .field.error input[type='time']:focus,
+.ui.form .field.error input[type='url']:focus,
+.ui.form .field.error textarea:focus {
+  background: var(--shade-white);
+  border: 2px solid var(--alert-error-900);
+  color: var(--shade-black);
 }
 
 .ui.input.error > input::placeholder,
-.ui.input.error > input:focus::placeholder {
+.ui.input.error > input:focus::placeholder,
+.ui.form .field.error input[type='email']:focus::placeholder,
+.ui.form .field.error input[type='file']:focus::placeholder,
+.ui.form .field.error input[type='number']:focus::placeholder,
+.ui.form .field.error input[type='password']:focus::placeholder,
+.ui.form .field.error input[type='search']:focus::placeholder,
+.ui.form .field.error input[type='tel']:focus::placeholder,
+.ui.form .field.error input[type='text']:focus::placeholder,
+.ui.form .field.error input[type='url']:focus::placeholder,
+.ui.form .field.error textarea::placeholder,
+.ui.form .field.error textarea:focus::placeholder {
   color: var(--neutral-900);
   font-weight: 400;
 }
