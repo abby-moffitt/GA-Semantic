@@ -111,18 +111,9 @@ export const Theme = () => {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
   const inputTypes = [
-    'color',
-    'date',
-    'datetime-local',
-    'email',
-    'file',
-    'number',
-    'password',
-    'search',
-    'tel',
-    'text',
-    'time',
-    'url',
+    { items: ['color', 'date', 'datetime-local', 'email'] },
+    { items: ['file', 'number', 'password', 'search'] },
+    { items: ['tel', 'text', 'time', 'url'] },
   ];
 
   // handlers
@@ -229,7 +220,7 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Dropdown
           </Header>
-          <div className='dropdownBox'>
+          <div className='column'>
             <Dropdown
               options={dropdownOptions}
               placeholder='Select'
@@ -248,6 +239,21 @@ export const Theme = () => {
               selection
             />
           </div>
+
+          <Header size='small' dividing>
+            Form Field
+          </Header>
+          <Form>
+            <Form.Field
+              control={Select}
+              label='Dropdown'
+              options={[
+                { key: 'option1', text: 'Option 1', value: 'option1' },
+                { key: 'option2', text: 'Option 2', value: 'option2' },
+              ]}
+              placeholder='Select options'
+            />
+          </Form>
         </Segment>
       </div>
 
@@ -264,7 +270,7 @@ export const Theme = () => {
             </Form.Field>
 
             <Header size='small' dividing>
-              Sates
+              States
             </Header>
             <Form.Field className='error'>
               <label htmlFor='input-error'>Error</label>
@@ -307,25 +313,20 @@ export const Theme = () => {
             Types
           </Header>
           <Form>
-            <Form.Field
-              control={Select}
-              label='Dropdown'
-              options={[
-                { key: 'option1', text: 'Option 1', value: 'option1' },
-                { key: 'option2', text: 'Option 2', value: 'option2' },
-              ]}
-              placeholder='Select options'
-            />
-
-            {inputTypes.map((type) => (
-              <Form.Field
-                className='formLabel'
-                control='input'
-                key={`input-${type}`}
-                label={type}
-                type={type}
-              />
-            ))}
+            <div className='column'>
+              {inputTypes.map((row, index) => (
+                <div className='row' key={`row-${index}`}>
+                  {row.items.map((item) => (
+                    <Form.Field
+                      className='formLabel'
+                      control='input'
+                      label={item}
+                      type={item}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
           </Form>
         </Segment>
       </div>

@@ -12,15 +12,6 @@
   flex-direction: column;
 }
 
-.dropdownBox {
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdownBox .dropdown {
-  margin: 5px 0;
-}
-
 .ui.form .field.formLabel > label {
   text-transform: capitalize;
 }
