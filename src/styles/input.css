@@ -24,6 +24,10 @@
   padding: var(--spacing-1) var(--spacing-4) var(--spacing-1) var(--spacing-2);
 }
 
+.ui.form textarea {
+  padding: var(--spacing-2);
+}
+
 /* focus */
 
 .ui.input > input:focus,
