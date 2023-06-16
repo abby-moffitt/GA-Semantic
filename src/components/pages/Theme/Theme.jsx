@@ -12,6 +12,7 @@ import {
   Input,
   Label,
   Message,
+  Modal,
   Segment,
   Select,
   Tab,
@@ -41,6 +42,7 @@ export const Theme = () => {
   // state
   const [inputValue, setInputValue] = useState('');
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   // vars
   const dropdownOptions = [
@@ -107,7 +109,7 @@ export const Theme = () => {
     },
   ];
 
-  const messageText =
+  const contentText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
   const inputTypes = [
@@ -136,6 +138,14 @@ export const Theme = () => {
 
   const handleCheckboxOnChange = () => {
     setIsCheckboxChecked(!isCheckboxChecked);
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -395,34 +405,34 @@ export const Theme = () => {
           <Header as='h2' dividing>
             Message
           </Header>
-          <MessageExample header='Title' content={messageText} icon='alarm' />
+          <MessageExample header='Title' content={contentText} icon='alarm' />
 
           <Header size='small' dividing>
             Info
           </Header>
-          <MessageExample content={messageText} info icon='info circle' />
+          <MessageExample content={contentText} info icon='info circle' />
 
           <Header size='small' dividing>
             Warning
           </Header>
-          <MessageExample content={messageText} warning icon='warning sign' />
+          <MessageExample content={contentText} warning icon='warning sign' />
 
           <Header size='small' dividing>
             Positive/success
           </Header>
-          <MessageExample content={messageText} success icon='check circle' />
+          <MessageExample content={contentText} success icon='check circle' />
 
           <Header size='small' dividing>
             Negative/error
           </Header>
-          <MessageExample content={messageText} error icon='warning circle' />
+          <MessageExample content={contentText} error icon='warning circle' />
 
           <Header size='small' dividing>
             Blue
           </Header>
           <MessageExample
             color='blue'
-            content={messageText}
+            content={contentText}
             icon='info circle'
             size='mini'
           />
@@ -432,7 +442,7 @@ export const Theme = () => {
           </Header>
           <MessageExample
             color='orange'
-            content={messageText}
+            content={contentText}
             icon='warning sign'
             size='mini'
           />
@@ -442,7 +452,7 @@ export const Theme = () => {
           </Header>
           <MessageExample
             color='green'
-            content={messageText}
+            content={contentText}
             icon='check circle'
             size='mini'
           />
@@ -452,10 +462,50 @@ export const Theme = () => {
           </Header>
           <MessageExample
             color='red'
-            content={messageText}
+            content={contentText}
             icon='warning circle'
             size='mini'
           />
+        </Segment>
+      </div>
+
+      <div className='section'>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Modal
+          </Header>
+
+          <Button onClick={handleOpenModal}>Open Modal</Button>
+
+          <Header size='small' dividing>
+            Modal trigger
+          </Header>
+          <Modal
+            onClose={handleCloseModal}
+            onOpen={handleOpenModal}
+            open={isModalOpen}
+            trigger={<Button>Open Modal (trigger)</Button>}
+            closeIcon
+          >
+            <Modal.Header>
+              <Header as='h2'>Heading 2</Header>
+            </Modal.Header>
+
+            <Modal.Content>
+              <Modal.Description>
+                <p>{contentText}</p>
+              </Modal.Description>
+            </Modal.Content>
+
+            <Modal.Actions>
+              <Button secondary size='small' onClick={handleCloseModal}>
+                Cancel
+              </Button>
+              <Button size='small' onClick={handleCloseModal}>
+                Confirm
+              </Button>
+            </Modal.Actions>
+          </Modal>
         </Segment>
       </div>
 
