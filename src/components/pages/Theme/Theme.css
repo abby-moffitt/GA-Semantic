@@ -21,25 +21,8 @@
   margin: 5px 0;
 }
 
-i.errorIcon {
-  color: var(--alert-error-900);
-}
-
-i.warningIcon {
-  color: var(--alert-warning-900);
-}
-
-i.checkIcon {
-  color: var(--alert-success-700);
-}
-
 .status {
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.status i {
-  font-size: 24px;
-  font-weight: 400;
 }
