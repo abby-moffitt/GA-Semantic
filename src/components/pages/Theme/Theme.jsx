@@ -111,6 +111,7 @@ export const Theme = () => {
 
   const contentText =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+  const placeholderText = 'Enter your value here...';
 
   const inputTypes = [
     'color',
@@ -270,7 +271,7 @@ export const Theme = () => {
                 { key: 'option1', text: 'Option 1', value: 'option1' },
                 { key: 'option2', text: 'Option 2', value: 'option2' },
               ]}
-              placeholder='Select options'
+              placeholder='Select'
             />
           </Form>
         </Segment>
@@ -285,7 +286,7 @@ export const Theme = () => {
           <Form>
             <Form.Field required>
               <label htmlFor='input-default'>Label</label>
-              <Input id='input-default' placeholder='Input' />
+              <Input id='input-default' placeholder={placeholderText} />
             </Form.Field>
 
             <Header size='small' dividing>
@@ -293,17 +294,17 @@ export const Theme = () => {
             </Header>
             <Form.Field className='error'>
               <label htmlFor='input-error'>Error</label>
-              <Input id='input-error' placeholder='Input' />
+              <Input id='input-error' placeholder={placeholderText} />
             </Form.Field>
 
             <Form.Field className='success'>
               <label htmlFor='input-success'>Success</label>
-              <Input id='input-success' placeholder='Input' />
+              <Input id='input-success' placeholder={placeholderText} />
             </Form.Field>
 
             <Form.Field className='disabled'>
               <label htmlFor='input-disabled'>Disabled</label>
-              <Input id='input-disabled' placeholder='Input' />
+              <Input id='input-disabled' placeholder={placeholderText} />
             </Form.Field>
           </Form>
         </Segment>
@@ -319,7 +320,7 @@ export const Theme = () => {
             <Input
               value={inputValue}
               onChange={handleInputChange}
-              placeholder='Text input'
+              placeholder={placeholderText}
               icon={
                 inputValue.length === 0 ? (
                   ''
@@ -335,6 +336,16 @@ export const Theme = () => {
           </div>
 
           <Header size='small' dividing>
+            Error
+          </Header>
+          <Input error placeholder={placeholderText} />
+
+          <Header size='small' dividing>
+            Disabled
+          </Header>
+          <Input disabled placeholder={placeholderText} />
+
+          <Header size='small' dividing>
             Types
           </Header>
           <Form>
@@ -346,6 +357,7 @@ export const Theme = () => {
                   key={`input-type-${index}`}
                   label={type}
                   type={type}
+                  placeholder={placeholderText}
                 />
               ))}
             </div>
@@ -525,11 +537,27 @@ export const Theme = () => {
           </Header>
 
           <Form>
-            <Form.Field
-              control={TextArea}
-              label='Textarea'
-              placeholder='Type your text here...'
-            />
+            <div className='column'>
+              <Form.Field
+                control={TextArea}
+                label='Textarea'
+                placeholder={placeholderText}
+              />
+
+              <Form.Field
+                control={TextArea}
+                error
+                label='Error'
+                placeholder={placeholderText}
+              />
+
+              <Form.Field
+                control={TextArea}
+                disabled
+                label='Disabled'
+                placeholder={placeholderText}
+              />
+            </div>
           </Form>
         </Segment>
       </div>
