@@ -111,6 +111,14 @@ Below are the Semantic UI components that have custom styles applied to them:
     <td>High</td>
     <td>High</td>
   </tr>
+  <tr>
+    <td><a href="https://react.semantic-ui.com/collections/table/" target="_blank">Table</a></td>
+    <td>Collection</td>
+    <td>table.css</td>
+    <td>High</td>
+    <td>High</td>
+    <td>Low</td>
+  </tr>
 </table>
 
 <br />

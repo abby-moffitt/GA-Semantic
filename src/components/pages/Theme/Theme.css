@@ -46,3 +46,9 @@
 .ui.form .field.formLabel > label {
   text-transform: capitalize;
 }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
