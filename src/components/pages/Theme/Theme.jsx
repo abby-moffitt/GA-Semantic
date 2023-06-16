@@ -44,6 +44,7 @@ export const Theme = () => {
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
   // vars
+
   const dropdownOptions = [
     {
       text: 'January',
@@ -432,7 +433,7 @@ export const Theme = () => {
       <div className='section'>
         <Segment padded>
           <Header as='h2' dividing>
-            Table
+            Table - Semantic UI
           </Header>
           <Table>
             <Table.Header>
@@ -449,8 +450,9 @@ export const Theme = () => {
                 <Table.Cell>
                   <div className='status'>
                     <Icon
+                      size='large'
+                      color='green'
                       verticalAlign='middle'
-                      className='checkIcon'
                       name='check circle'
                     />
                     Complete
@@ -465,7 +467,7 @@ export const Theme = () => {
                 <Table.Cell>Renewal</Table.Cell>
                 <Table.Cell>
                   <div className='status'>
-                    <Icon className='errorIcon' name='warning circle' />
+                    <Icon size='large' color='red' name='warning circle' />
                     Incomplete
                   </div>
                 </Table.Cell>
@@ -477,7 +479,11 @@ export const Theme = () => {
                 <Table.Cell>Calendar Year End</Table.Cell>
                 <Table.Cell>
                   <div className='status'>
-                    <Icon className='warningIcon' name='exclamation triangle' />
+                    <Icon
+                      size='large'
+                      color='orange'
+                      name='exclamation triangle'
+                    />
                     Pending
                   </div>
                 </Table.Cell>
@@ -493,7 +499,7 @@ export const Theme = () => {
                 <Table.Cell>Issue</Table.Cell>
                 <Table.Cell>
                   <div className='status'>
-                    <Icon className='checkIcon' name='check circle' />
+                    <Icon size='large' color='green' name='check circle' />
                     Complete
                   </div>
                 </Table.Cell>
