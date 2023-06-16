@@ -433,7 +433,7 @@ export const Theme = () => {
       <div className='section'>
         <Segment padded>
           <Header as='h2' dividing>
-            Table - Semantic UI
+            Table
           </Header>
           <Table>
             <Table.Header>
