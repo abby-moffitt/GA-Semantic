@@ -24,8 +24,6 @@ table.ui.table thead tr th {
 
 table.ui.table tbody tr td {
   color: var(--primary-pms-539-900);
-  line-height: var(--line-height);
-  font-weight: 400;
   padding: var(--spacing-2) var(--spacing-3);
   align-items: center;
 }
