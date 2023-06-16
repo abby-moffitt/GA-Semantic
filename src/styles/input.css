@@ -131,6 +131,7 @@
 .ui.form .field.disabled textarea {
   color: var(--neutral-700);
   border: 1px solid var(--neutral-700);
+  opacity: 1;
 }
 
 .ui.input.disabled > input::placeholder,
