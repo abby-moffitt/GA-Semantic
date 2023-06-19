@@ -32,4 +32,17 @@ table.ui.table tbody tr td {
   table.ui.table tbody tr td.aligned {
     text-align: left;
   }
+/** footer **/
+
+table.ui.table tfoot tr th span {
+  display: none;
+}
+
+table.ui.table tfoot tr th {
+  text-align: center;
+}
+
+table.ui.table tfoot i.icon {
+  color: var(--primary-pms-362-900);
+  font-weight: 400;
 }
