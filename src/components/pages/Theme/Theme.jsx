@@ -833,7 +833,6 @@ export const Theme = () => {
             columnModel={columnModel}
             data={data}
             name='sample'
-            localStore
             pageSize={5}
             title=''
           />

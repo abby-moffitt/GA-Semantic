@@ -32,13 +32,15 @@ table.ui.table tbody tr td {
   table.ui.table tbody tr td.aligned {
     text-align: left;
   }
+}
 /** footer **/
 
 table.ui.table tfoot tr th span {
   display: none;
 }
 
-table.ui.table tfoot tr th {
+table.ui.table tfoot tr th:first-child {
+  background-color: var(--shade-white);
   text-align: center;
 }
 
