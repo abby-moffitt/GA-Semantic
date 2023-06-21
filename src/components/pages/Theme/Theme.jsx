@@ -24,7 +24,7 @@ import {
 } from 'semantic-ui-react';
 
 // styles
-import './Theme.css';
+import styles from './Theme.module.css';
 
 const MessageExample = (props) => {
   const [isMessageOpen, setIsMessageOpen] = useState(true);
@@ -359,23 +359,23 @@ export const Theme = () => {
 
   return (
     <div>
-      <div className='section'>
+      <div className={styles.section}>
         <Header as='h1'>Global Atlantic</Header>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Button
           </Header>
 
-          <div className='column'>
-            <div className='row'>
+          <div className={styles.column}>
+            <div className={styles.row}>
               <Button size='small'>Small Primary</Button>
               <Button size='medium'>Medium Primary</Button>
               <Button size='large'>Large Primary</Button>
             </div>
-            <div className='row'>
+            <div className={styles.row}>
               <Button secondary size='small'>
                 Small Secondary
               </Button>
@@ -390,7 +390,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Checkbox
@@ -409,19 +409,19 @@ export const Theme = () => {
           <Header size='small' dividing>
             Form
           </Header>
-          <div className='section'>
+          <div className={styles.section}>
             <Form.Checkbox label='Form checkbox' />
           </div>
           <Form.Field control={Checkbox} label='Form field' />
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Divider
           </Header>
-          <div className='column'>
+          <div className={styles.column}>
             <div>
               <p>
                 Some text <strong>above</strong> the divider consectetur
@@ -443,12 +443,12 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Dropdown
           </Header>
-          <div className='column'>
+          <div className={styles.column}>
             <Dropdown
               options={dropdownOptions}
               placeholder='Select'
@@ -485,7 +485,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Form Label
@@ -500,17 +500,17 @@ export const Theme = () => {
             <Header size='small' dividing>
               States
             </Header>
-            <Form.Field className='error'>
+            <Form.Field className={styles.error}>
               <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder={placeholderText} />
             </Form.Field>
 
-            <Form.Field className='success'>
+            <Form.Field className={styles.success}>
               <label htmlFor='input-success'>Success</label>
               <Input id='input-success' placeholder={placeholderText} />
             </Form.Field>
 
-            <Form.Field className='disabled'>
+            <Form.Field className={styles.disabled}>
               <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder={placeholderText} />
             </Form.Field>
@@ -518,13 +518,13 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Input
           </Header>
 
-          <div className='grid'>
+          <div className={styles.grid}>
             <Input
               value={inputValue}
               onChange={handleInputChange}
@@ -557,10 +557,10 @@ export const Theme = () => {
             Types
           </Header>
           <Form>
-            <div className='grid'>
+            <div className={styles.grid}>
               {inputTypes.map((type, index) => (
                 <Form.Field
-                  className='formLabel'
+                  className={styles.formLabel}
                   control='input'
                   key={`input-type-${index}`}
                   label={type}
@@ -573,7 +573,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Label
@@ -581,7 +581,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Default
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label color='green'>Filled Green</Label>
             <Label color='blue'>Filled Blue</Label>
             <Label color='grey'>Filled Grey</Label>
@@ -589,7 +589,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Outlined
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label basic color='green'>
               Outlined Green
             </Label>
@@ -603,7 +603,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Interactive
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label basic as='button' color='green'>
               Interactive
               <Icon name='delete' />
@@ -620,7 +620,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Message
@@ -689,7 +689,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Modal
@@ -729,7 +729,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Tab
@@ -738,7 +738,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Table - Semantic UI
@@ -756,7 +756,7 @@ export const Theme = () => {
               <Table.Row verticalAlign='middle'>
                 <Table.Cell>Anniversary</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon
                       size='large'
                       color='green'
@@ -774,7 +774,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Renewal</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon size='large' color='red' name='warning circle' />
                     Incomplete
                   </div>
@@ -786,7 +786,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Calendar Year End</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon
                       size='large'
                       color='orange'
@@ -806,7 +806,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Issue</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon size='large' color='green' name='check circle' />
                     Complete
                   </div>
@@ -824,7 +824,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Table - Redux Datagrid
@@ -839,14 +839,14 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Text Area
           </Header>
 
           <Form>
-            <div className='column'>
+            <div className={styles.column}>
               <Form.Field
                 control={TextArea}
                 label='Textarea'
@@ -871,7 +871,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Typography
