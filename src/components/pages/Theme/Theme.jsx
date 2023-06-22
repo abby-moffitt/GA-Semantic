@@ -1,49 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 //redux datagrid
 import Datagrid, { PaginationHandler } from 'redux-form-datagrid';
 
 // semantic
-import {
-  Button,
-  Checkbox,
-  Divider,
-  Dropdown,
-  Form,
-  Header,
-  Icon,
-  Input,
-  Label,
-  Message,
-  Modal,
-  Segment,
-  Select,
-  Tab,
-  Table,
-  TextArea,
-} from 'semantic-ui-react';
+import { Header, Segment } from 'semantic-ui-react';
 
 // segments
-import { ButtonSegment } from './segments';
+import {
+  ButtonSegment,
+  CheckboxSegment,
+  DividerSegment,
+  DropdownSegment,
+  FormLabelSegment,
+  InputSegment,
+  LabelSegment,
+  MessageSegment,
+  ModalSegment,
+  TableSegment,
+  TabSegment,
+  TextAreaSegment,
+  TypographySegment,
+} from './segments';
 
 // styles
 import styles from './Theme.module.css';
-
-const MessageExample = (props) => {
-  const [isMessageOpen, setIsMessageOpen] = useState(true);
-
-  const handleMessageDismissClick = () => {
-    setIsMessageOpen(false);
-  };
-
-  return (
-    <div>
-      {isMessageOpen && (
-        <Message onDismiss={handleMessageDismissClick} {...props} />
-      )}
-    </div>
-  );
-};
 
 const SectionWrapper = ({ title, children }) => {
   return (
@@ -59,6 +40,7 @@ const SectionWrapper = ({ title, children }) => {
 };
 
 export const Theme = () => {
+<<<<<<< HEAD
   // state
   const [inputValue, setInputValue] = useState('');
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
@@ -372,6 +354,54 @@ export const Theme = () => {
 
       <SectionWrapper title='Button'>
         <ButtonSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Checkbox'>
+        <CheckboxSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Divider'>
+        <DividerSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Dropdown'>
+        <DropdownSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Form Label'>
+        <FormLabelSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Input'>
+        <InputSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Label'>
+        <LabelSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Message'>
+        <MessageSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Modal'>
+        <ModalSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Table'>
+        <TableSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Tab'>
+        <TabSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Text Area'>
+        <TextAreaSegment />
+      </SectionWrapper>
+
+      <SectionWrapper title='Typography'>
+        <TypographySegment />
       </SectionWrapper>
     </div>
   );
