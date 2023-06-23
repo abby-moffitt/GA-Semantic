@@ -50,7 +50,6 @@ export const Theme = () => {
 
   // vars
   const data = [
-    // missing workphone should be rendered as blank
     {
       name: 'John Doe',
       govtID: '823456789',
@@ -59,7 +58,6 @@ export const Theme = () => {
       insuredDate: '09/10/2020',
       amount: '1875.00',
     },
-    // incorrect data in govtID should be rendered with error
     {
       name: 'John Smith',
       govtID: '72345670',
@@ -194,17 +192,13 @@ export const Theme = () => {
       order: 2,
       sortable: true,
       sortingType: 'number',
-      sortComparator: 'default', // can be skipped and default should be used
-      // formatter should only be called if data is valid else render value as is with error
-      // formatter should only be called for non empty, non-null values
-      /*not implemented yet*/
+      sortComparator: 'default',
       validator: (value) => {
         if (value.length === 9) {
           return true;
         }
         return false;
       },
-      // Can custom render cell values (might be key for redux form)
       formatter: (value) =>
         `${value.substring(0, 3)}-${value.substring(3, 5)}-${value.substring(
           5
@@ -216,8 +210,6 @@ export const Theme = () => {
       order: 3,
       sortable: true,
       sortingType: 'number',
-      // skipping default comparator
-      // skipping formatter, same value should be rendered
     },
     {
       dataIndex: 'insuredDate',
@@ -239,7 +231,6 @@ export const Theme = () => {
       name: 'Work Phone',
       sortable: true,
       sortingType: 'number',
-      // missing order should be pushed to end
       formatter: (value) => (
         <div>
           <Icon name='phone' />
@@ -741,7 +732,7 @@ export const Theme = () => {
       <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
-            Table - Semantic UI
+            Table
           </Header>
           <Table>
             <Table.Header>
