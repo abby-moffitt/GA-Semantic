@@ -16,7 +16,7 @@ table.ui.table thead tr th {
 
 @media only screen and (max-width: 767px) {
   .table.ui.table thead tr th {
-    text-align: left;
+    display: none !important;
   }
 }
 
