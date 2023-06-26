@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 // semantic
 import { Form, Header, Icon, Input } from 'semantic-ui-react';
 
+// constants
 import { placeholderText } from './';
+
+// styles
+import styles from './layout.module.css';
 
 export const InputSegment = () => {
   // state
@@ -36,7 +40,7 @@ export const InputSegment = () => {
 
   return (
     <>
-      <div className='grid'>
+      <div className={styles.grid}>
         <Input
           value={inputValue}
           onChange={handleChange}
@@ -65,10 +69,10 @@ export const InputSegment = () => {
         Types
       </Header>
       <Form>
-        <div className='grid'>
+        <div className={styles.grid}>
           {inputTypes.map((type, index) => (
             <Form.Field
-              className='formLabel'
+              className={styles.formLabel}
               control='input'
               key={`input-type-${index}`}
               label={type}

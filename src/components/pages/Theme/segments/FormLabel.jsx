@@ -16,7 +16,7 @@ export const FormLabelSegment = () => {
       <Header size='small' dividing>
         States
       </Header>
-      <Form.Field className='error'>
+      <Form.Field error>
         <label htmlFor='input-error'>Error</label>
         <Input id='input-error' placeholder={placeholderText} />
       </Form.Field>
@@ -26,7 +26,7 @@ export const FormLabelSegment = () => {
         <Input id='input-success' placeholder={placeholderText} />
       </Form.Field>
 
-      <Form.Field className='disabled'>
+      <Form.Field disabled>
         <label htmlFor='input-disabled'>Disabled</label>
         <Input id='input-disabled' placeholder={placeholderText} />
       </Form.Field>

@@ -3,13 +3,16 @@ import React from 'react';
 // semantic
 import { Header, Icon, Label } from 'semantic-ui-react';
 
+// styles
+import styles from './layout.module.css';
+
 export const LabelSegment = () => {
   return (
     <>
       <Header size='small' dividing>
         Default
       </Header>
-      <div className='row'>
+      <div className={styles.row}>
         <Label color='green'>Filled Green</Label>
         <Label color='blue'>Filled Blue</Label>
         <Label color='grey'>Filled Grey</Label>
@@ -18,7 +21,7 @@ export const LabelSegment = () => {
       <Header size='small' dividing>
         Outlined
       </Header>
-      <div className='row'>
+      <div className={styles.row}>
         <Label basic color='green'>
           Outlined Green
         </Label>
@@ -33,7 +36,7 @@ export const LabelSegment = () => {
       <Header size='small' dividing>
         Interactive
       </Header>
-      <div className='row'>
+      <div className={styles.row}>
         <Label basic as='button' color='green'>
           Interactive
           <Icon name='delete' />

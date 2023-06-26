@@ -3,6 +3,9 @@ import React from 'react';
 // semantic
 import { Dropdown, Form, Header, Select } from 'semantic-ui-react';
 
+// styles
+import styles from './layout.module.css';
+
 export const DropdownSegment = () => {
   // vars
   const options = [
@@ -38,15 +41,10 @@ export const DropdownSegment = () => {
 
   return (
     <>
-      <div className='column'>
+      <div className={styles.column}>
         <Dropdown options={options} placeholder='Select' selection />
         <Dropdown error options={options} placeholder='Select' selection />
-        <Dropdown
-          disabled
-          options={options}
-          placeholder='Select'
-          selection
-        />
+        <Dropdown disabled options={options} placeholder='Select' selection />
       </div>
 
       <Header size='small' dividing>

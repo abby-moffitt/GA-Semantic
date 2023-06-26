@@ -3,15 +3,18 @@ import React from 'react';
 // semantic
 import { Button } from 'semantic-ui-react';
 
+// styles
+import styles from './layout.module.css';
+
 export const ButtonSegment = () => {
   return (
-    <div className='column'>
-      <div className='row'>
+    <div className={styles.column}>
+      <div className={styles.row}>
         <Button size='small'>Small Primary</Button>
         <Button size='medium'>Medium Primary</Button>
         <Button size='large'>Large Primary</Button>
       </div>
-      <div className='row'>
+      <div className={styles.row}>
         <Button secondary size='small'>
           Small Secondary
         </Button>

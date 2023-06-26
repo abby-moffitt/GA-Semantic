@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // semantic
 import { Checkbox, Header, Form } from 'semantic-ui-react';
 
+// styles
+import styles from './layout.module.css';
+
 export const CheckboxSegment = () => {
   // state
   const [isChecked, setIsChecked] = useState(false);
@@ -24,10 +27,10 @@ export const CheckboxSegment = () => {
       <Header size='small' dividing>
         Form
       </Header>
-      <div className='section'>
+      <div className={styles.column}>
         <Form.Checkbox label='Form checkbox' />
+        <Form.Field control={Checkbox} label='Form field' />
       </div>
-      <Form.Field control={Checkbox} label='Form field' />
     </>
   );
 };

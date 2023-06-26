@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 // semantic
 import { Button, Checkbox, Icon, Table, Label } from 'semantic-ui-react';
 
+// styles
+
+import styles from './layout.module.css';
+
 export const TableSegment = () => {
   // state
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
@@ -27,7 +31,7 @@ export const TableSegment = () => {
         <Table.Row verticalAlign='middle'>
           <Table.Cell>Anniversary</Table.Cell>
           <Table.Cell>
-            <div className='status'>
+            <div className={styles.status}>
               <Icon
                 size='large'
                 color='green'
@@ -46,7 +50,7 @@ export const TableSegment = () => {
         <Table.Row>
           <Table.Cell>Renewal</Table.Cell>
           <Table.Cell>
-            <div className='status'>
+            <div className={styles.status}>
               <Icon size='large' color='red' name='warning circle' />
               Incomplete
             </div>
@@ -59,7 +63,7 @@ export const TableSegment = () => {
         <Table.Row>
           <Table.Cell>Calendar Year End</Table.Cell>
           <Table.Cell>
-            <div className='status'>
+            <div className={styles.status}>
               <Icon size='large' color='orange' name='exclamation triangle' />
               Pending
             </div>
@@ -76,7 +80,7 @@ export const TableSegment = () => {
         <Table.Row>
           <Table.Cell>Issue</Table.Cell>
           <Table.Cell>
-            <div className='status'>
+            <div className={styles.status}>
               <Icon size='large' color='green' name='check circle' />
               Complete
             </div>

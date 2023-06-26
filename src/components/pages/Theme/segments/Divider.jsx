@@ -3,9 +3,12 @@ import React from 'react';
 // semantic
 import { Divider } from 'semantic-ui-react';
 
+// styles
+import styles from './layout.module.css';
+
 export const DividerSegment = () => {
   return (
-    <div className='column'>
+    <div className={styles.column}>
       <div>
         <p>
           Some text <strong>above</strong> the divider consectetur adipiscing
