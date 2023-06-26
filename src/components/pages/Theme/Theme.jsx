@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+//redux datagrid
+import Datagrid, { PaginationHandler } from 'redux-form-datagrid';
+
 // semantic
 import {
   Button,
@@ -21,7 +24,7 @@ import {
 } from 'semantic-ui-react';
 
 // styles
-import './Theme.css';
+import styles from './Theme.module.css';
 
 const MessageExample = (props) => {
   const [isMessageOpen, setIsMessageOpen] = useState(true);
@@ -46,6 +49,200 @@ export const Theme = () => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   // vars
+  const data = [
+    {
+      name: 'John Doe',
+      govtID: '823456789',
+      homePhone: '3431231233',
+      workPhone: '',
+      insuredDate: '09/10/2020',
+      amount: '1875.00',
+    },
+    {
+      name: 'John Smith',
+      govtID: '72345670',
+      homePhone: '3431231237',
+      workPhone: '',
+      insuredDate: '02/13/2020',
+      amount: '1250.00',
+    },
+    {
+      name: 'Darius Carreira',
+      govtID: '223456678',
+      homePhone: '8674561293',
+      workPhone: '8674561245',
+      insuredDate: '07/25/2020',
+      amount: '150.00',
+    },
+    {
+      name: 'John Smith',
+      govtID: '12345678',
+      homePhone: '3431231236',
+      workPhone: '',
+      insuredDate: '01/13/2020',
+      amount: '11625.00',
+    },
+    {
+      name: 'Darius Carreira',
+      govtID: '523456678',
+      homePhone: '8674561297',
+      workPhone: '8674561245',
+      insuredDate: '03/11/2020',
+      amount: '1152.29',
+    },
+    {
+      name: 'John Smith',
+      govtID: '32345678',
+      homePhone: '3431231234',
+      workPhone: '',
+      insuredDate: '06/22/2020',
+      amount: '-1250',
+    },
+    {
+      name: 'Darius Carreira1',
+      govtID: '923456678',
+      homePhone: '8674561294',
+      workPhone: '8674561245',
+      insuredDate: '04/28/2020',
+      amount: '1875.00',
+    },
+    {
+      name: 'John Smith1',
+      govtID: '42345678',
+      homePhone: '3431231234',
+      workPhone: '',
+      insuredDate: '08/15/2020',
+      amount: '1050',
+    },
+    {
+      name: 'Darius Carreira1',
+      govtID: '223456678',
+      homePhone: '8674561292',
+      workPhone: '8674561245',
+      insuredDate: '05/19/2020',
+      amount: '1050.00',
+    },
+    {
+      name: 'John Smith',
+      govtID: '62345678',
+      homePhone: '3431231234',
+      workPhone: '',
+      insuredDate: '09/14/2020',
+      amount: '69.95',
+    },
+    {
+      name: 'Darius Carreira1',
+      govtID: '823456678',
+      homePhone: '8674561294',
+      workPhone: '8674561245',
+      insuredDate: '03/20/2020',
+      amount: '65',
+    },
+    {
+      name: 'John Smith1',
+      govtID: '72345678',
+      homePhone: '3431231234',
+      workPhone: '',
+      insuredDate: '12/12/2020',
+      amount: '34.97',
+    },
+    {
+      name: 'Darius Carreira1',
+      govtID: '323456678',
+      homePhone: '8674561292',
+      workPhone: '8674561245',
+      insuredDate: '11/12/2020',
+      amount: '34.97',
+    },
+    {
+      name: 'John Smith',
+      govtID: '62345678',
+      homePhone: '3431231234',
+      workPhone: '',
+      insuredDate: '05/30/2020',
+      amount: '34.97',
+    },
+    {
+      name: 'Darius Carreira1',
+      govtID: '123456678',
+      homePhone: '8674561294',
+      workPhone: '8674561245',
+      insuredDate: '09/29/2020',
+      amount: '34.97',
+    },
+  ];
+
+  const columnModel = [
+    {
+      dataIndex: 'name',
+      name: 'Name',
+      order: 1,
+      sortComparator: (first, second) => {
+        if (first < second) {
+          return true;
+        }
+        return false;
+      },
+      sortable: true,
+      sortingType: 'string',
+    },
+    {
+      dataIndex: 'govtID',
+      name: 'Government ID',
+      order: 2,
+      sortable: true,
+      sortingType: 'number',
+      sortComparator: 'default',
+      validator: (value) => {
+        if (value.length === 9) {
+          return true;
+        }
+        return false;
+      },
+      formatter: (value) =>
+        `${value.substring(0, 3)}-${value.substring(3, 5)}-${value.substring(
+          5
+        )}`,
+    },
+    {
+      dataIndex: 'homePhone',
+      name: 'Home Phone',
+      order: 3,
+      sortable: true,
+      sortingType: 'number',
+    },
+    {
+      dataIndex: 'insuredDate',
+      name: 'Insured Date',
+      order: 4,
+      sortable: true,
+      sortingType: 'date',
+    },
+    {
+      dataIndex: 'amount',
+      name: 'Amount',
+      order: 5,
+      sortable: true,
+      sortingType: 'number',
+      formatter: (value) => <div>${value}</div>,
+    },
+    {
+      dataIndex: 'workPhone',
+      name: 'Work Phone',
+      sortable: true,
+      sortingType: 'number',
+      formatter: (value) => (
+        <div>
+          <Icon name='phone' />
+          {value &&
+            `(${value.substring(0, 3)})-${value.substring(
+              3,
+              6
+            )}-${value.substring(6)}`}
+        </div>
+      ),
+    },
+  ];
 
   const dropdownOptions = [
     {
@@ -153,23 +350,23 @@ export const Theme = () => {
 
   return (
     <div>
-      <div className='section'>
+      <div className={styles.section}>
         <Header as='h1'>Global Atlantic</Header>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Button
           </Header>
 
-          <div className='column'>
-            <div className='row'>
+          <div className={styles.column}>
+            <div className={styles.row}>
               <Button size='small'>Small Primary</Button>
               <Button size='medium'>Medium Primary</Button>
               <Button size='large'>Large Primary</Button>
             </div>
-            <div className='row'>
+            <div className={styles.row}>
               <Button secondary size='small'>
                 Small Secondary
               </Button>
@@ -184,7 +381,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Checkbox
@@ -203,19 +400,19 @@ export const Theme = () => {
           <Header size='small' dividing>
             Form
           </Header>
-          <div className='section'>
+          <div className={styles.section}>
             <Form.Checkbox label='Form checkbox' />
           </div>
           <Form.Field control={Checkbox} label='Form field' />
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Divider
           </Header>
-          <div className='column'>
+          <div className={styles.column}>
             <div>
               <p>
                 Some text <strong>above</strong> the divider consectetur
@@ -237,12 +434,12 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Dropdown
           </Header>
-          <div className='column'>
+          <div className={styles.column}>
             <Dropdown
               options={dropdownOptions}
               placeholder='Select'
@@ -279,7 +476,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Form Label
@@ -294,17 +491,17 @@ export const Theme = () => {
             <Header size='small' dividing>
               States
             </Header>
-            <Form.Field className='error'>
+            <Form.Field className={styles.error}>
               <label htmlFor='input-error'>Error</label>
               <Input id='input-error' placeholder={placeholderText} />
             </Form.Field>
 
-            <Form.Field className='success'>
+            <Form.Field className={styles.success}>
               <label htmlFor='input-success'>Success</label>
               <Input id='input-success' placeholder={placeholderText} />
             </Form.Field>
 
-            <Form.Field className='disabled'>
+            <Form.Field className={styles.disabled}>
               <label htmlFor='input-disabled'>Disabled</label>
               <Input id='input-disabled' placeholder={placeholderText} />
             </Form.Field>
@@ -312,13 +509,13 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Input
           </Header>
 
-          <div className='grid'>
+          <div className={styles.grid}>
             <Input
               value={inputValue}
               onChange={handleInputChange}
@@ -351,10 +548,10 @@ export const Theme = () => {
             Types
           </Header>
           <Form>
-            <div className='grid'>
+            <div className={styles.grid}>
               {inputTypes.map((type, index) => (
                 <Form.Field
-                  className='formLabel'
+                  className={styles.formLabel}
                   control='input'
                   key={`input-type-${index}`}
                   label={type}
@@ -367,7 +564,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Label
@@ -375,7 +572,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Default
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label color='green'>Filled Green</Label>
             <Label color='blue'>Filled Blue</Label>
             <Label color='grey'>Filled Grey</Label>
@@ -383,7 +580,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Outlined
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label basic color='green'>
               Outlined Green
             </Label>
@@ -397,7 +594,7 @@ export const Theme = () => {
           <Header size='small' dividing>
             Interactive
           </Header>
-          <div className='row'>
+          <div className={styles.row}>
             <Label basic as='button' color='green'>
               Interactive
               <Icon name='delete' />
@@ -414,7 +611,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Message
@@ -483,7 +680,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Modal
@@ -523,7 +720,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Tab
@@ -532,7 +729,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment padded>
           <Header as='h2' dividing>
             Table
@@ -550,7 +747,7 @@ export const Theme = () => {
               <Table.Row verticalAlign='middle'>
                 <Table.Cell>Anniversary</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon
                       size='large'
                       color='green'
@@ -568,7 +765,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Renewal</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon size='large' color='red' name='warning circle' />
                     Incomplete
                   </div>
@@ -580,7 +777,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Calendar Year End</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon
                       size='large'
                       color='orange'
@@ -600,7 +797,7 @@ export const Theme = () => {
               <Table.Row>
                 <Table.Cell>Issue</Table.Cell>
                 <Table.Cell>
-                  <div className='status'>
+                  <div className={styles.status}>
                     <Icon size='large' color='green' name='check circle' />
                     Complete
                   </div>
@@ -618,14 +815,29 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
+        <Segment padded>
+          <Header as='h2' dividing>
+            Table - Redux Datagrid
+          </Header>
+          <Datagrid
+            columnModel={columnModel}
+            data={data}
+            name='sample'
+            pageSize={5}
+            title=''
+          />
+        </Segment>
+      </div>
+
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Text Area
           </Header>
 
           <Form>
-            <div className='column'>
+            <div className={styles.column}>
               <Form.Field
                 control={TextArea}
                 label='Textarea'
@@ -650,7 +862,7 @@ export const Theme = () => {
         </Segment>
       </div>
 
-      <div className='section'>
+      <div className={styles.section}>
         <Segment>
           <Header as='h2' dividing>
             Typography
