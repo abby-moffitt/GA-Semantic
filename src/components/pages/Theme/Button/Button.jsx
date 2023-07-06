@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 
 // styles
-import styles from './layout.module.css';
+import styles from '../Theme.module.css';
 
 export const ButtonSegment = () => {
   return (

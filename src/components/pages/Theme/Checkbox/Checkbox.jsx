@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Checkbox, Header, Form } from 'semantic-ui-react';
 
 // styles
-import styles from './layout.module.css';
+import styles from '../Theme.module.css';
 
 export const CheckboxSegment = () => {
   // state

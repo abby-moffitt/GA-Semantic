@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Form, Header, Icon, Input } from 'semantic-ui-react';
 
 // styles
-import styles from './layout.module.css';
+import styles from '../Theme.module.css';
 
 export const InputSegment = () => {
   // state

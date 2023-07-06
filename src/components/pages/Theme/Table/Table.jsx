@@ -5,7 +5,7 @@ import { Button, Checkbox, Icon, Table, Label } from 'semantic-ui-react';
 
 // styles
 
-import styles from './layout.module.css';
+import styles from '../Theme.module.css';
 
 export const TableSegment = () => {
   // state

@@ -4,22 +4,20 @@ import React from 'react';
 import { Header, Segment } from 'semantic-ui-react';
 
 // segments
-import {
-  ButtonSegment,
-  CheckboxSegment,
-  DatagridSegment,
-  DividerSegment,
-  DropdownSegment,
-  FormLabelSegment,
-  InputSegment,
-  LabelSegment,
-  MessageSegment,
-  ModalSegment,
-  TableSegment,
-  TabSegment,
-  TextAreaSegment,
-  TypographySegment,
-} from './segments';
+import { ButtonSegment } from './Button/Button';
+import { CheckboxSegment } from './Checkbox/Checkbox';
+import { DividerSegment } from './Divider/Divider';
+import { DropdownSegment } from './Dropdown/Dropdown';
+import { FormLabelSegment } from './FormLabel/FormLabel';
+import { InputSegment } from './Input/Input';
+import { LabelSegment } from './Label/Label';
+import { MessageSegment } from './Message/Message';
+import { ModalSegment } from './Modal/Modal';
+import { TableSegment } from './Table/Table';
+import { DatagridSegment } from './Datagrid/Datagrid';
+import { TabSegment } from './Tab/Tab';
+import { TextAreaSegment } from './TextArea/TextArea';
+import { TypographySegment } from './Typography/Typography';
 
 // styles
 import styles from './Theme.module.css';

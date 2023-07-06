@@ -4,7 +4,7 @@ import React from 'react';
 import { Divider } from 'semantic-ui-react';
 
 // styles
-import styles from './layout.module.css';
+import styles from '../Theme.module.css';
 
 export const DividerSegment = () => {
   return (
