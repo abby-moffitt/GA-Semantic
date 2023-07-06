@@ -6,6 +6,7 @@ import { Header, Segment } from 'semantic-ui-react';
 // segments
 import { ButtonSegment } from './Button/Button';
 import { CheckboxSegment } from './Checkbox/Checkbox';
+import { DatagridSegment } from './Datagrid/Datagrid';
 import { DividerSegment } from './Divider/Divider';
 import { DropdownSegment } from './Dropdown/Dropdown';
 import { FormLabelSegment } from './FormLabel/FormLabel';
@@ -14,7 +15,6 @@ import { LabelSegment } from './Label/Label';
 import { MessageSegment } from './Message/Message';
 import { ModalSegment } from './Modal/Modal';
 import { TableSegment } from './Table/Table';
-import { DatagridSegment } from './Datagrid/Datagrid';
 import { TabSegment } from './Tab/Tab';
 import { TextAreaSegment } from './TextArea/TextArea';
 import { TypographySegment } from './Typography/Typography';
@@ -78,16 +78,16 @@ export const Theme = () => {
         <ModalSegment />
       </SectionWrapper>
 
+      <SectionWrapper title='Tab'>
+        <TabSegment />
+      </SectionWrapper>
+
       <SectionWrapper title='Table'>
         <TableSegment />
       </SectionWrapper>
 
       <SectionWrapper title='Table - Redux Datagrid'>
         <DatagridSegment />
-      </SectionWrapper>
-
-      <SectionWrapper title='Tab'>
-        <TabSegment />
       </SectionWrapper>
 
       <SectionWrapper title='Text Area'>
