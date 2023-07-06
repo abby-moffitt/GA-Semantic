@@ -3,25 +3,27 @@ import React, { useState } from 'react';
 // semantic
 import { Header, Message } from 'semantic-ui-react';
 
-import { contentText } from './';
-
 const MessageExample = (props) => {
+  // state
   const [isMessageOpen, setIsMessageOpen] = useState(true);
 
+  // functions
   const handleDismissClick = () => {
     setIsMessageOpen(false);
   };
 
   return (
     <div>
-      {isMessageOpen && (
-        <Message onDismiss={handleDismissClick} {...props} />
-      )}
+      {isMessageOpen && <Message onDismiss={handleDismissClick} {...props} />}
     </div>
   );
 };
 
 export const MessageSegment = () => {
+  // vars
+  const contentText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+
   return (
     <>
       <Header size='small' dividing>

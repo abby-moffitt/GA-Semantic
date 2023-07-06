@@ -3,9 +3,10 @@ import React from 'react';
 // semantic
 import { Form, Header, Input } from 'semantic-ui-react';
 
-import { placeholderText } from './';
-
 export const FormLabelSegment = () => {
+  // vars
+  const placeholderText = 'Enter your value here...';
+
   return (
     <Form>
       <Form.Field required>

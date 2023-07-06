@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 // semantic
 import { Button, Header, Modal } from 'semantic-ui-react';
 
-import { contentText } from './';
-
 export const ModalSegment = () => {
   // state
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // vars
+  const contentText =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
   // functions
   const handleOpenModal = () => {

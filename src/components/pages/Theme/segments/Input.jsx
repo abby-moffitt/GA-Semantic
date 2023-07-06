@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 // semantic
 import { Form, Header, Icon, Input } from 'semantic-ui-react';
 
-// constants
-import { placeholderText } from './';
-
 // styles
 import styles from './layout.module.css';
 
@@ -28,6 +25,7 @@ export const InputSegment = () => {
     'time',
     'url',
   ];
+  const placeholderText = 'Enter your value here...';
 
   // functions
   const handleChange = (e) => {

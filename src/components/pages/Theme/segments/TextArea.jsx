@@ -3,10 +3,10 @@ import React from 'react';
 // semantic
 import { Form, TextArea } from 'semantic-ui-react';
 
-// constants
-import { placeholderText } from './';
-
 export const TextAreaSegment = () => {
+  // vars
+  const placeholderText = 'Enter your value here...';
+
   return (
     <Form>
       <Form.Field
