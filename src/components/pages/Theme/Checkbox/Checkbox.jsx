@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // semantic
-import { Checkbox, Header, Form } from 'semantic-ui-react';
+import { Checkbox, Header, Form, Segment } from 'semantic-ui-react';
 
 // styles
 import styles from '../Theme.module.css';
@@ -16,7 +16,11 @@ export const CheckboxSegment = () => {
   };
 
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Checkbox
+      </Header>
+
       <Checkbox label='Default Checkbox' onChange={handleOnChange} />
 
       <Header size='small' dividing>
@@ -31,6 +35,6 @@ export const CheckboxSegment = () => {
         <Form.Checkbox label='Form checkbox' />
         <Form.Field control={Checkbox} label='Form field' />
       </div>
-    </>
+    </Segment>
   );
 };

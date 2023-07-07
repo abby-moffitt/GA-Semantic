@@ -4,7 +4,7 @@ import React from 'react';
 import Datagrid from 'redux-form-datagrid';
 
 // semantic
-import { Icon } from 'semantic-ui-react';
+import { Header, Icon, Segment } from 'semantic-ui-react';
 
 export const DatagridSegment = () => {
   // vars
@@ -204,7 +204,11 @@ export const DatagridSegment = () => {
   ];
 
   return (
-    <div>
+    <Segment>
+      <Header as='h2' dividing>
+        Table - Redux Datagrid
+      </Header>
+
       <Datagrid
         columnModel={columnModel}
         data={data}
@@ -212,6 +216,6 @@ export const DatagridSegment = () => {
         pageSize={5}
         title=''
       />
-    </div>
+    </Segment>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // semantic
-import { Header, Segment } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 
 // segments
 import { ButtonSegment } from './Button/Button';
@@ -22,19 +22,6 @@ import { TypographySegment } from './Typography/Typography';
 // styles
 import styles from './Theme.module.css';
 
-const SectionWrapper = ({ title, children }) => {
-  return (
-    <div className={styles.section}>
-      <Segment>
-        <Header as='h2' dividing>
-          {title}
-        </Header>
-        {children}
-      </Segment>
-    </div>
-  );
-};
-
 export const Theme = () => {
   return (
     <div>
@@ -42,61 +29,61 @@ export const Theme = () => {
         <Header as='h1'>Global Atlantic</Header>
       </div>
 
-      <SectionWrapper title='Button'>
+      <div className={styles.section}>
         <ButtonSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Checkbox'>
+      <div className={styles.section}>
         <CheckboxSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Divider'>
+      <div className={styles.section}>
         <DividerSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Dropdown'>
+      <div className={styles.section}>
         <DropdownSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Form Label'>
+      <div className={styles.section}>
         <FormLabelSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Input'>
+      <div className={styles.section}>
         <InputSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Label'>
+      <div className={styles.section}>
         <LabelSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Message'>
+      <div className={styles.section}>
         <MessageSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Modal'>
+      <div className={styles.section}>
         <ModalSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Tab'>
+      <div className={styles.section}>
         <TabSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Table'>
+      <div className={styles.section}>
         <TableSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Table - Redux Datagrid'>
+      <div className={styles.section}>
         <DatagridSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Text Area'>
+      <div className={styles.section}>
         <TextAreaSegment />
-      </SectionWrapper>
+      </div>
 
-      <SectionWrapper title='Typography'>
+      <div className={styles.section}>
         <TypographySegment />
-      </SectionWrapper>
+      </div>
     </div>
   );
 };

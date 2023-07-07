@@ -1,14 +1,18 @@
 import React from 'react';
 
 // semantic
-import { Header, Icon, Label } from 'semantic-ui-react';
+import { Header, Icon, Label, Segment } from 'semantic-ui-react';
 
 // styles
 import styles from '../Theme.module.css';
 
 export const LabelSegment = () => {
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Label
+      </Header>
+
       <Header size='small' dividing>
         Default
       </Header>
@@ -50,6 +54,6 @@ export const LabelSegment = () => {
           <Icon name='delete' />
         </Label>
       </div>
-    </>
+    </Segment>
   );
 };

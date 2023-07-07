@@ -1,11 +1,15 @@
 import React from 'react';
 
 // semantic
-import { Header } from 'semantic-ui-react';
+import { Header, Segment } from 'semantic-ui-react';
 
 export const TypographySegment = () => {
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Typography
+      </Header>
+
       <Header size='huge'>Huge</Header>
       <Header size='large'>Large</Header>
       <Header as='h1'>Heading 1</Header>
@@ -17,6 +21,6 @@ export const TypographySegment = () => {
       <Header size='medium'>Medium</Header>
       <Header size='small'>Small</Header>
       <Header size='tiny'>Tiny</Header>
-    </>
+    </Segment>
   );
 };

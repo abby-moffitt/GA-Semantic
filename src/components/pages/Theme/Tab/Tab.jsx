@@ -1,7 +1,7 @@
 import React from 'react';
 
 // semantic
-import { Tab } from 'semantic-ui-react';
+import { Header, Segment, Tab } from 'semantic-ui-react';
 
 export const TabSegment = () => {
   // vars
@@ -38,5 +38,13 @@ export const TabSegment = () => {
     },
   ];
 
-  return <Tab panes={panes} />;
+  return (
+    <Segment>
+      <Header as='h2' dividing>
+        Tabs
+      </Header>
+
+      <Tab panes={panes} />
+    </Segment>
+  );
 };

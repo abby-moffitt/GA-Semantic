@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // semantic
-import { Button, Header, Modal } from 'semantic-ui-react';
+import { Button, Header, Modal, Segment } from 'semantic-ui-react';
 
 export const ModalSegment = () => {
   // state
@@ -21,7 +21,11 @@ export const ModalSegment = () => {
   };
 
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Modal
+      </Header>
+
       <Button onClick={handleOpenModal}>Open Modal</Button>
 
       <Header size='small' dividing>
@@ -53,6 +57,6 @@ export const ModalSegment = () => {
           </Button>
         </Modal.Actions>
       </Modal>
-    </>
+    </Segment>
   );
 };

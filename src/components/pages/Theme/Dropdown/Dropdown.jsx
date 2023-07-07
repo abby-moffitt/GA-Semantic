@@ -1,7 +1,7 @@
 import React from 'react';
 
 // semantic
-import { Dropdown, Form, Header, Select } from 'semantic-ui-react';
+import { Dropdown, Form, Header, Segment, Select } from 'semantic-ui-react';
 
 // styles
 import styles from '../Theme.module.css';
@@ -40,7 +40,11 @@ export const DropdownSegment = () => {
   ];
 
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Dropdown
+      </Header>
+
       <div className={styles.column}>
         <Dropdown options={options} placeholder='Select' selection />
         <Dropdown error options={options} placeholder='Select' selection />
@@ -61,6 +65,6 @@ export const DropdownSegment = () => {
           placeholder='Select'
         />
       </Form>
-    </>
+    </Segment>
   );
 };

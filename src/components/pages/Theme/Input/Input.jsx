@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // semantic
-import { Form, Header, Icon, Input } from 'semantic-ui-react';
+import { Form, Header, Icon, Input, Segment } from 'semantic-ui-react';
 
 // styles
 import styles from '../Theme.module.css';
@@ -37,7 +37,11 @@ export const InputSegment = () => {
   };
 
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Input
+      </Header>
+
       <div className={styles.grid}>
         <Input
           value={inputValue}
@@ -80,6 +84,6 @@ export const InputSegment = () => {
           ))}
         </div>
       </Form>
-    </>
+    </Segment>
   );
 };

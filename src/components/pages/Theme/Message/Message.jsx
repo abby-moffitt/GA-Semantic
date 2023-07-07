@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // semantic
-import { Header, Message } from 'semantic-ui-react';
+import { Header, Message, Segment } from 'semantic-ui-react';
 
 const MessageExample = (props) => {
   // state
@@ -25,7 +25,11 @@ export const MessageSegment = () => {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
 
   return (
-    <>
+    <Segment>
+      <Header as='h2' dividing>
+        Message
+      </Header>
+
       <Header size='small' dividing>
         Info
       </Header>
@@ -85,6 +89,6 @@ export const MessageSegment = () => {
         icon='warning circle'
         size='mini'
       />
-    </>
+    </Segment>
   );
 };
