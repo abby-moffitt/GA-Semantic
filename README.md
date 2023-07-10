@@ -1,2 +1,0 @@
-# GA-Semantic
-GA Semantic

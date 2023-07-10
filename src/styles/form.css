@@ -1,0 +1,35 @@
+/* form */
+
+.ui.form {
+  font-family: var(--gotham);
+}
+
+/* Label */
+.ui.form .field > label {
+  font-size: var(--p3-font-size);
+  line-height: var(--p3-line-height);
+  color: var(--neutral-900);
+  font-weight: 700;
+  text-transform: none;
+}
+
+/* Focus */
+.ui.form .field:focus-within > label {
+  color: var(--primary-pms-362-900);
+}
+
+/* Error */
+.ui.form .field.error > label {
+  color: var(--alert-error-900);
+}
+
+/* Success */
+.ui.form .field.success > label {
+  color: var(--primary-pms-362-900);
+}
+
+/* Disabled */
+.ui.form .field.disabled > label {
+  color: var(--neutral-700);
+  opacity: 1;
+}

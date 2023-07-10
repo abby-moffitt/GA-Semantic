@@ -1,0 +1,35 @@
+/* menu */
+
+.ui.tabular.menu {
+  border-bottom: none;
+  min-height: 0;
+}
+
+.ui.menu {
+  gap: var(--spacing-3);
+}
+
+.ui.tabular.menu .item {
+  flex-direction: row-reverse;
+  gap: var(--spacing-1);
+  border-top: none;
+  border-right: none;
+  border-bottom: 6px solid var(--neutral-700);
+  border-left: none;
+  border-radius: 0;
+  padding: 0 var(--spacing-1);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  white-space: nowrap;
+}
+
+.ui.tabular.menu .active.item {
+  border-color: var(--primary-pms-362-900);
+}
+
+.ui.menu .item > i.icon {
+  margin: 0;
+  width: auto;
+  height: auto;
+  color: var(--primary-process-blue-900);
+}

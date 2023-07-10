@@ -1,0 +1,6 @@
+/* segment */
+
+.ui.segment.attached {
+  padding: var(--spacing-4) 0 0 0;
+  border: none;
+}
