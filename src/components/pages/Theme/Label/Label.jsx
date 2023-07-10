@@ -1,0 +1,59 @@
+import React from 'react';
+
+// semantic
+import { Header, Icon, Label, Segment } from 'semantic-ui-react';
+
+// styles
+import styles from '../Theme.module.css';
+
+export const LabelSegment = () => {
+  return (
+    <Segment>
+      <Header as='h2' dividing>
+        Label
+      </Header>
+
+      <Header size='small' dividing>
+        Default
+      </Header>
+      <div className={styles.row}>
+        <Label color='green'>Filled Green</Label>
+        <Label color='blue'>Filled Blue</Label>
+        <Label color='grey'>Filled Grey</Label>
+      </div>
+
+      <Header size='small' dividing>
+        Outlined
+      </Header>
+      <div className={styles.row}>
+        <Label basic color='green'>
+          Outlined Green
+        </Label>
+        <Label basic color='blue'>
+          Outlined Blue
+        </Label>
+        <Label basic color='grey'>
+          Outlined Grey
+        </Label>
+      </div>
+
+      <Header size='small' dividing>
+        Interactive
+      </Header>
+      <div className={styles.row}>
+        <Label basic as='button' color='green'>
+          Interactive
+          <Icon name='delete' />
+        </Label>
+        <Label as='button' color='blue'>
+          Interactive
+          <Icon name='delete' />
+        </Label>
+        <Label as='button' color='grey'>
+          Interactive
+          <Icon name='delete' />
+        </Label>
+      </div>
+    </Segment>
+  );
+};

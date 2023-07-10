@@ -1,5 +1,5 @@
 .section {
-  margin: 0 0 var(--spacing-3) 0;
+  margin: var(--spacing-3) 0;
 }
 
 .row,
@@ -37,6 +37,14 @@
   width: 100%;
 }
 
+/* table icons */
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 /* formLabel */
 
 .ui.form .field.formLabel {
@@ -45,10 +53,4 @@
 
 .ui.form .field.formLabel > label {
   text-transform: capitalize;
-}
-
-.status {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
