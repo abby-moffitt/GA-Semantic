@@ -6,5 +6,11 @@ import { Icon, Header, Form, Segment } from 'semantic-ui-react';
   </Header>
   
     <Icon style = "icon.green" name="users" />
-  ...
-</Segment>
+    <Icon style = ".icon.blue" name="users" /> 
+    <Icon style = ".icon.red" name="users" /> 
+    <Icon style = ".icon.grey" name="users" />
+    <Icon style = ".icon.orange" name="users" />
+    <Icon style = ".icon.black" name="users" />
+
+    
+    </Segment>
