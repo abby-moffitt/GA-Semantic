@@ -1,23 +1,23 @@
 .icon.blue{
-    color: background-grey;
+    color: var(background-grey);
 }
 
 .icon.red{
-    color:alert-warning-900;
+    color: var(alert-warning-900);
 }
 
 .icon.green{
-    color:pms-362-900;
+    color:var(pms-362-900);
 }
 
 .icon.grey{
-    color:neutral-900;
+    color:var(neutral-900);
 }
 
 .icon.orange{
-    color:alert-warning-900;
+    color:var(alert-warning-900);
 }
 
 .icon.black{
-    color:shade-black;
+    color: var(shade-black);
 }
