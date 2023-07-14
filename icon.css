@@ -1,0 +1,23 @@
+.icon.blue{
+    color: var(--background-grey);
+}
+
+.icon.red{
+    color: var(--alertwarning-900);
+}
+
+.icon.green{
+    color:var(--pms-362-900);
+}
+
+.icon.grey{
+    color:var(--neutral-900);
+}
+
+.icon.orange{
+    color:var(--alert-warning-900);
+}
+
+.icon.black{
+    color: var(--shade-black);
+}
